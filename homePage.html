@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="main-wrapper -mt-5">
+        <nav class="navbar">
+            <div class="brand-and-icon">
+                <a href="#" class="navbar-brand"><img src="https://brandingpioneers.com/images/logo.png" alt=""
+                        class="max-w-36"></a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            electronics
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>top categories</h4>
+                                <ul>
+                                    <li><a href="#">cell phones & accessories</a></li>
+                                    <li><a href="#">smart tv</a></li>
+                                    <li><a href="#">computer & laptops</a></li>
+                                    <li><a href="#">digital cameras</a></li>
+                                    <li><a href="#">video games & accessories</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>other categories</h4>
+                                <ul>
+                                    <li><a href="#">iphones</a></li>
+                                    <li><a href="#">speakers</a></li>
+                                    <li><a href="#">samsung devices</a></li>
+                                    <li><a href="#">audio & headphones</a></li>
+                                    <li><a href="#">vehicles electronics & GPS</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h2>all essential devices and tools for home</h2>
+                                <button type="button" class="btn">shop here</button>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <img src="images/car.png" alt="product image">
+                            </div>
+                            <!-- end of item -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            fashion
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>top categories</h4>
+                                <ul>
+                                    <li><a href="#">men's clothing</a></li>
+                                    <li><a href="#">women's clothing</a></li>
+                                    <li><a href="#">men's shoes</a></li>
+                                    <li><a href="#">women's shoes</a></li>
+                                    <li><a href="#">clothing deals</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>other categories</h4>
+                                <ul>
+                                    <li><a href="#">fine jewelry</a></li>
+                                    <li><a href="#">fashion jewelry</a></li>
+                                    <li><a href="#">men's accessories</a></li>
+                                    <li><a href="#">handbags & bags</a></li>
+                                    <li><a href="#">kid's clothing</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h2>stylish and modern fashion clothing</h2>
+                                <button type="button" class="btn">shop here</button>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png"
+                                    alt="product image">
+                            </div>
+                            <!-- end of item -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            health & beauty
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>top categories</h4>
+                                <ul>
+                                    <li><a href="#">makeup</a></li>
+                                    <li><a href="#">health care</a></li>
+                                    <li><a href="#">fragrance</a></li>
+                                    <li><a href="#">hair care & stylings</a></li>
+                                    <li><a href="#">manicure & pedicure</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>other categories</h4>
+                                <ul>
+                                    <li><a href="#">skin care</a></li>
+                                    <li><a href="#">vitamins</a></li>
+                                    <li><a href="#">vision care</a></li>
+                                    <li><a href="#">oral care</a></li>
+                                    <li><a href="#">shaving & hair removal</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h2>the latest product is here</h2>
+                                <button type="button" class="btn">shop here</button>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <img src="images/gymn.png" alt="product image">
+                            </div>
+                            <!-- end of item -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            sports
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>top categories</h4>
+                                <ul>
+                                    <li><a href="#">cycling</a></li>
+                                    <li><a href="#">outdoor sports</a></li>
+                                    <li><a href="#">hunting</a></li>
+                                    <li><a href="#">fishing</a></li>
+                                    <li><a href="#">fitness & yoga</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h4>other categories</h4>
+                                <ul>
+                                    <li><a href="#">tennis</a></li>
+                                    <li><a href="#">swimming</a></li>
+                                    <li><a href="#">winter sports</a></li>
+                                    <li><a href="#">fitness technology</a></li>
+                                    <li><a href="#">sports wear</a></li>
+                                </ul>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <h2>gear up for sports & adventures</h2>
+                                <button type="button" class="btn">shop here</button>
+                            </div>
+                            <!-- end of item -->
+                            <!-- item -->
+                            <div class="sub-menu-item">
+                                <img src="images/helmet.png" alt="product image">
+                            </div>
+                            <!-- end of item -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">deals</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section id="hero-1946">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">Building Your Digital Presence</h2>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        We successfully manage projects of varying complexity, provide long-term strategies, and
+                        continuously adopt new technologies to enhance your digital footprint.
+                    </p>
+                    <a href="#services" class="cs-button-solid ">Learn More</a>
+                </div>
+            </div>
+            <picture class="cs-picture">
+                <source media="(min-width: 601px)"
+                    srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
+                <source media="(max-width: 600px)"
+                    srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
+                <img decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png"
+                    alt="Digital Marketing Strategy" width="1280" height="510">
+            </picture>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-icon-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tool.svg"
+                            decoding="async" alt="SEO Optimization Icon" width="40" height="40" aria-hidden="true">
+                    </picture>
+
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">SEO Optimization</h3>
+                        <p class="cs-item-text">Enhancing your website’s visibility on search engines to attract more
+                            organic traffic.</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-picture">
+                        <img class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hard-hat.svg"
+                            decoding="async" alt="Content Marketing Icon" width="40" height="40" aria-hidden="true">
+                    </picture>
+
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Content Marketing</h3>
+                        <p class="cs-item-text">Creating and distributing valuable content to engage and convert your
+                            target
+                            audience.</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-picture">
+                        <img class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/double-bed.svg"
+                            decoding="async" alt="Social Media Management Icon" width="40" height="40"
+                            aria-hidden="true">
+                    </picture>
+
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Social Media Management</h3>
+                        <p class="cs-item-text">Managing your social media channels to build brand awareness and foster
+                            customer relationships.</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-picture">
+                        <img class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/building.svg"
+                            decoding="async" alt="PPC Advertising Icon" width="40" height="40" aria-hidden="true">
+                    </picture>
+
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">PPC Advertising</h3>
+                        <p class="cs-item-text">Creating and managing pay-per-click campaigns to drive targeted traffic
+                            and
+                            maximize ROI.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="our-services">
+        <div class="container">
+            <div class="desc">
+                <div class="heading">
+                    <h1 class="text-3xl">Our Services</h1>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, velit a bibendum
+                        vulputate,
+                        metus enim pretium massa, eu placerat lacus leo vitae velit. Donec rutrum est sed lacus
+                        scelerisque
+                        scelerisque a ac magna. Suspendisse. </p>
+                </div>
+            </div>
+            <div class="services">
+
+                <div class="column" id="column-1">
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-flask">
+
+                            </i>
+                            <p class="service-txt">
+                                bussiniss intelegince
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-bullhorn">
+
+                            </i>
+                            <p class="service-txt">
+                                digital marketing
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon far fa-lightbulb">
+
+                            </i>
+                            <p class="service-txt">
+                                PRODUCT DEVELOPMENT
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="column-2">
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-wrench">
+
+                            </i>
+                            <p class="service-txt">
+                                CRM CUSTOMAIZATION
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-database">
+
+                            </i>
+                            <p class="service-txt">
+                                BUSINESS INTELLIGENCE
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-chart-pie">
+
+                            </i>
+                            <p class="service-txt">
+                                DATA AQUSITION
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="column-2">
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-tasks">
+
+                            </i>
+                            <p class="service-txt">
+                                PROJECT MAGNEMENT
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-desc">
+                            <i class="service-icon fas fa-certificate">
+
+                            </i>
+                            <p class="service-txt">
+                                SEO/SEM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service hidden">
+                        <div class="service-desc">
+                            <i class="service-icon">
+
+                            </i>
+                            <p class="service-txt">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container px-6 py-12 mx-auto">
+            <h1 class="text-2xl font-semibold text-gray-800 lg:text-3xl">Portfolio</h1>
+
+            <div class="mt-8 xl:mt-16 lg:flex lg:-mx-12">
+                <div class="lg:mx-12">
+                    <h1 class="text-xl font-semibold text-gray-800">Table of Content</h1>
+
+                    <div class="mt-4 space-y-4 lg:mt-8">
+                        <a href="#" class="block text-teal-500 hover:underline">Web design</a>
+                        <a href="#" class="block text-gray-500 hover:underline">App design</a>
+                        <a href="#" class="block text-gray-500 hover:underline">Branding</a>
+                        <a href="#" class="block text-gray-500 hover:underline">Animation</a>
+                    </div>
+                </div>
+
+                <div class="flex-1 mt-8 lg:mx-12 lg:mt-0">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 ">
+                        <div>
+                            <img class="object-cover w-full rounded-lg h-96"
+                                src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
+                                alt="Best website collections">
+                            <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize">Best website
+                                collections</h2>
+                            <p class="mt-2 text-lg tracking-wider text-teal-500 uppercase">Website</p>
+                        </div>
+
+                        <div>
+                            <img class="object-cover w-full rounded-lg h-96"
+                                src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                                alt="Block of Ui kit collections">
+                            <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize">Block of Ui kit
+                                collections</h2>
+                            <p class="mt-2 text-lg tracking-wider text-teal-500 uppercase">Ui kit</p>
+                        </div>
+
+                        <div>
+                            <img class="object-cover w-full rounded-lg h-96"
+                                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="Ton’s of mobile mockup">
+                            <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize">Ton’s of mobile
+                                mockup</h2>
+                            <p class="mt-2 text-lg tracking-wider text-teal-500 uppercase">Mockups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-1750">
+        <div class="cs-container">
+            <div class="cs-form-group">
+                <div class="cs-content">
+                    <span class="cs-topper">Get in Touch</span>
+                    <h2 class="cs-title">Contact Us</h2>
+                </div>
+                <!--Form-->
+                <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post">
+                    <label class="cs-label">
+                        Name *
+                        <input class="cs-input" required type="text" id="name-1750" name="name" placeholder="John Doe">
+                    </label>
+                    <label class="cs-label cs-email">
+                        Email *
+                        <input class="cs-input" required type="email" id="email-1750" name="email"
+                            placeholder="name@company.com">
+                    </label>
+                    <label class="cs-label cs-phone">
+                        Phone *
+                        <input class="cs-input" required type="phone" id="phone-1750" name="phone"
+                            placeholder="+1 (206) 987-6543">
+                    </label>
+                    <label class="cs-label">
+                        Message *
+                        <textarea class="cs-input cs-textarea" required name="Message" id="message-1750"
+                            placeholder="Hello, I am interested..."></textarea>
+                    </label>
+                    <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+            <!--Contact Info-->
+            <div class="cs-info-group">
+                <div class="cs-info">
+                    <span class="cs-topper">Location</span>
+                    <span class="cs-detail">234-244 Stockwell Rd, 4th Floor<br>Brixton, SW9 9SP</span>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-topper">Working Hours</span>
+                    <span class="cs-detail">Monday - Saturday: 10:00 - 20:00</span>
+                    <span class="cs-detail">Sunday: Closed</span>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-topper">Contact</span>
+                    <span class="cs-detail">M: +99 40 70 929</span>
+                    <span class="cs-detail">E: info@stitchgym.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-picture-group">
+            <!--Replace with your iframe for your google business profile-->
+            <iframe class="cs-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.180130224705!2d77.08141588064942!3d28.506324277244552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2286cb252607%3A0x5b5af71fbe24d212!2sBranding%20Pioneers%20%7C%20Best%20Digital%20Marketing%20Agency%20in%20Gurgaon%20%7C%20SEO%2C%20SEM%2C%20SMM%2C%20Advertising%2C%20Website%20Design%20%26%20Development!5e0!3m2!1sen!2sin!4v1734782770239!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!--All three graphics use the same src, which is transformed in the CSS. If you want to replace the graphic with another one, simply replace all the src's with the same URL and watch the magic happen!-->
+            <img class="cs-graphic cs-top cs-light"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+            <img class="cs-graphic cs-left cs-light"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+            <img class="cs-graphic cs-bottom cs-light"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+
+            <!--This is a dark version. Download the images and change the fill color to match the color of the section background below it-->
+            <img class="cs-graphic cs-top cs-dark"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+            <img class="cs-graphic cs-left cs-dark"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+            <img class="cs-graphic cs-bottom cs-dark"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg"
+                alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+        </div>
+
+    </section>
+
+    <footer class="bg-white lg:grid lg:grid-cols-5">
+        <div class="relative block h-32 lg:col-span-2 lg:h-full">
+            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Digital Marketing Strategy" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+
+        <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <!-- Contact Information -->
+                <div>
+                    <p>
+                        <span class="text-xs uppercase tracking-wide text-gray-500">Call Us</span>
+
+                        <a href="tel:+919811780937"
+                            class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl">
+                            +91 9811780937
+                        </a>
+                    </p>
+
+                    <ul class="mt-8 space-y-1 text-sm text-gray-700">
+                        <li>Monday to Friday: 9am - 6pm</li>
+                        <li>Saturday: 10am - 4pm</li>
+                    </ul>
+
+                    <!-- Social Media Links -->
+                    <ul class="mt-8 flex gap-6">
+                        <li>
+                            <a href="https://www.facebook.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Facebook</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Instagram</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.398.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.055.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Twitter</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/company/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">LinkedIn</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zm.02 17.5V8h-5v12h5zm7.49-17H9.97C8.17 1 6.9 2.17 6.9 3.9v16.2c0 1.73 1.27 2.9 2.77 2.9h5.04c1.5 0 2.77-1.17 2.77-2.9V8c0-1.73-1.27-2.9-2.77-2.9zm0 18H9.97V8h5.04v12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <!-- Services Section -->
+                    <div>
+                        <p class="font-medium text-gray-900">Services</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">SEO Optimization</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Content Marketing</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Social Media
+                                    Management</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">PPC Advertising</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Email Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div>
+                        <p class="font-medium text-gray-900">Company</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">About Us</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Our Team</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Careers</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Testimonials</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Links and Copyright -->
+            <div class="mt-12 border-t border-gray-100 pt-12">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <ul class="flex flex-wrap gap-4 text-xs">
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Cookies</a>
+                        </li>
+                    </ul>
+
+                    <p class="mt-8 text-xs text-gray-500 sm:mt-0">
+                        &copy; 2024. Branding Pioneers . All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+</div>
