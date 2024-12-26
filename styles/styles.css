@@ -847,3 +847,67 @@ body {
     transform: rotate(0deg);
   }
 }
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px; /* Height of the horizontal scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #319795; /* Tailwind's teal-500 */
+  border-radius: 3px; /* Rounded corners for the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #2c7a7b; /* Tailwind's teal-600 on hover */
+}
+
+/* Firefox scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Makes scrollbar thinner */
+  scrollbar-color: #319795 transparent; /* Thumb color and track color */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox when not scrolling */
+.custom-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* Show custom scrollbar on hover for devices that support hover */
+  .custom-scrollbar::-webkit-scrollbar {
+    display: block;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #319795 transparent;
+  }
+}
+
+/* animation of snowflake */
+.spin-slow {
+  animation: spin 10s linear infinite;
+}
+
+.teal-filter {
+  @apply filter brightness-0 sepia saturate-500 hue-rotate-170;
+}
+
+/* Hide scrollbar for all browsers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
