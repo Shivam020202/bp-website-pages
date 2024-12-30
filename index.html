@@ -1429,25 +1429,55 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
     <script>
-        // Lite YouTube Embed Implementation
+        // First, define the Lite YouTube Embed component
         class LiteYTEmbed extends HTMLElement {
+            constructor() {
+                super();
+                this.isIframeLoaded = false;
+            }
+
             connectedCallback() {
                 this.videoId = this.getAttribute('videoid');
 
                 this.addEventListener('click', () => {
-                    const iframe = document.createElement('iframe');
-                    iframe.width = '100%';
-                    iframe.height = '100%';
-                    iframe.title = 'YouTube video player';
-                    iframe.frameBorder = '0';
-                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                    iframe.allowFullscreen = true;
-                    iframe.src = `https://www.youtube-nocookie.com/embed/${this.videoId}?autoplay=1`;
+                    if (!this.isIframeLoaded) {
+                        // Stop autoplay when video is clicked
+                        if (window.swiper) {
+                            window.swiper.autoplay.stop();
+                            // Disable autoplay completely
+                            window.swiper.params.autoplay.enabled = false;
+                        }
 
-                    this.innerHTML = '';
-                    this.appendChild(iframe);
+                        const iframe = document.createElement('iframe');
+                        iframe.width = '100%';
+                        iframe.height = '100%';
+                        iframe.title = 'YouTube video player';
+                        iframe.frameBorder = '0';
+                        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                        iframe.allowFullscreen = true;
+                        iframe.src = `https://www.youtube-nocookie.com/embed/${this.videoId}?autoplay=1&enablejsapi=1`;
+
+                        // Remove background image and play button
+                        this.style.backgroundImage = '';
+                        const playBtn = this.querySelector('.lty-playbtn');
+                        if (playBtn) {
+                            playBtn.remove();
+                        }
+
+                        this.appendChild(iframe);
+                        this.isIframeLoaded = true;
+
+                        // Listen for video end
+                        iframe.addEventListener('load', () => {
+                            iframe.contentWindow.postMessage(JSON.stringify({
+                                event: 'listening',
+                                id: this.videoId
+                            }), '*');
+                        });
+                    }
                 });
 
+                // Set preview image
                 const playBtn = document.createElement('button');
                 playBtn.className = 'lty-playbtn';
                 this.appendChild(playBtn);
@@ -1455,8 +1485,24 @@
         }
         customElements.define('lite-youtube', LiteYTEmbed);
 
+        // Add message listener for video events
+        window.addEventListener('message', (e) => {
+            try {
+                const data = JSON.parse(e.data);
+                if (data.event === 'onStateChange' && data.info === 0) { // Video ended
+                    if (window.swiper) {
+                        // Re-enable and start autoplay when video ends
+                        window.swiper.params.autoplay.enabled = true;
+                        window.swiper.autoplay.start();
+                    }
+                }
+            } catch (err) {
+                // Handle parsing error
+            }
+        });
+
         // Initialize Swiper
-        const swiper = new Swiper('.video-testimonials', {
+        window.swiper = new Swiper('.video-testimonials', {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
@@ -1474,12 +1520,24 @@
                 },
                 1024: {
                     slidesPerView: 3,
-                },
+                }
             },
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
             },
+            on: {
+                slideChange: function () {
+                    // Find any active videos and pause them when sliding
+                    const activeVideos = document.querySelectorAll('lite-youtube iframe');
+                    activeVideos.forEach(video => {
+                        const videoParent = video.closest('lite-youtube');
+                        if (videoParent && !videoParent.closest('.swiper-slide-active')) {
+                            video.src = video.src; // This effectively resets/stops the video
+                        }
+                    });
+                }
+            }
         });
     </script>
 
