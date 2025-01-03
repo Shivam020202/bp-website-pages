@@ -1145,3 +1145,69 @@ lite-youtube > iframe {
 .swiper-pagination-bullet-active {
   background: #0d9488 !important;
 }
+.client-tab {
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+.client-tab.active {
+  border-bottom: 2px solid #2563eb;
+  background: linear-gradient(to right, #eef2ff, transparent);
+}
+.case-study-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.case-study-content.active {
+  display: block;
+  opacity: 1;
+}
+.metric-card {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.progress-bar {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-value {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  transition: width 0.5s ease;
+}
+.slides-container {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.slide.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.slide-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+  width: 24px;
+  border-radius: 4px;
+  background-color: #2563eb;
+}

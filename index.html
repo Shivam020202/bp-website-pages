@@ -29,6 +29,7 @@
 
 <body>
 
+    <!-- Navbar -->
     <div class="main-wrapper fixed z-50 w-full">
         <nav class="navbar">
             <div class="brand-and-icon">
@@ -486,6 +487,7 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <div class="container max-w-7xl mx-auto px-4 py-16">
         <!-- Top Icon -->
         <div class="flex justify-center mb-8">
@@ -922,6 +924,163 @@
         </div>
     </div>
 
+    <section class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="mb-8 pt-12">
+            <h2 class="text-3xl font-bold text-gray-900">Case Studies</h2>
+            <p class="text-gray-600 mt-2">Transforming businesses through digital excellence</p>
+        </div>
+
+        <!-- Client Tabs -->
+        <div class="flex space-x-1 mb-8 overflow-x-auto hide-scrollbar">
+            <button onclick="switchClient(0)" class="client-tab active px-6 py-3 text-sm font-medium whitespace-nowrap">
+                Medanta Hospitals
+            </button>
+            <button onclick="switchClient(1)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+                Tech Solutions Inc
+            </button>
+            <button onclick="switchClient(2)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+                Global Retail Corp
+            </button>
+            <button onclick="switchClient(3)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+                Education First
+            </button>
+        </div>
+
+        <!-- Case Study Content -->
+        <div class="case-study-content active" data-client="0">
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Overview Card -->
+                <div class="lg:col-span-2 bg-white rounded-xl border-2 border-gray-100 p-6">
+                    <div class="flex items-center mb-6">
+                        <img src="https://enquire.brandingpioneers.com/medanta-logo.png" alt="Medanta Logo"
+                            class="w-12 h-12 rounded-lg">
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-gray-900">Medanta Hospitals</h3>
+                            <p class="text-sm text-gray-500">Healthcare • Video Marketing • SEO</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="relative h-48">
+                            <!-- Slide Indicators -->
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="slide-indicator active" data-slide="0"></div>
+                                <div class="slide-indicator" data-slide="1"></div>
+                                <div class="slide-indicator" data-slide="2"></div>
+                            </div>
+
+                            <!-- Content Slides -->
+                            <div class="slides-container">
+                                <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                    data-slide="0">
+                                    <h4 class="text-lg font-medium mb-2">The Challenge</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Medanta Hospitals needed to boost patient engagement and education through
+                                        specialized videography
+                                        and marketing in the tertiary care sector, facing challenges in digital presence
+                                        and educational
+                                        outreach.
+                                    </p>
+                                </div>
+
+                                <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                    data-slide="1">
+                                    <h4 class="text-lg font-medium mb-2">The Solution</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        We implemented comprehensive video marketing strategies with professional
+                                        production
+                                        and strategic distribution, focusing on patient-centric content.
+                                    </p>
+                                </div>
+
+                                <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                    data-slide="2">
+                                    <h4 class="text-lg font-medium mb-2">The Impact</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Achieved significant growth with 400% increase in video viewership and doubled
+                                        patient
+                                        engagement rates through targeted content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Achievements -->
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Video Viewership</p>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 80%"></div>
+                                </div>
+                                <p class="text-sm font-medium mt-1">400% Increase</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Patient Engagement</p>
+                                <div class="progress-bar">
+                                    <div class="progress-value" style="width: 60%"></div>
+                                </div>
+                                <p class="text-sm font-medium mt-1">2x Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics Cards -->
+                <div class="space-y-4">
+                    <div class="metric-card p-6 rounded-xl shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm text-gray-500">Monthly Views</p>
+                                <h4 class="text-2xl font-bold mt-1">438.9K</h4>
+                            </div>
+                            <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 23%</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card p-6 rounded-xl shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm text-gray-500">Watch Time</p>
+                                <h4 class="text-2xl font-bold mt-1">6.9K hrs</h4>
+                            </div>
+                            <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 18%</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href="#"
+                        class="block p-6 hover:bg-gradient-to-l transition-all duration-200 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+                        <h4 class="font-medium mb-1">View Full Case Study</h4>
+                        <p class="text-sm opacity-90">Explore our complete transformation story →</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional client content sections (hidden by default) -->
+        <div class="case-study-content" data-client="1">
+            <!-- Similar structure for Tech Solutions Inc -->
+        </div>
+        <div class="case-study-content" data-client="2">
+            <!-- Similar structure for Global Retail Corp -->
+        </div>
+        <div class="case-study-content" data-client="3">
+            <!-- Similar structure for Education First -->
+        </div>
+    </section>
+
+    <!-- CTA -->
     <div class="relative overflow-hidden">
         <!-- Background Decoration -->
         <div class="absolute top-0 left-0 w-full h-full">
@@ -997,6 +1156,7 @@
         </div>
     </div>
 
+    <!-- Testimonials Section -->
     <div class="max-w-7xl mx-auto px-4 py-16">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12">
@@ -1188,6 +1348,7 @@
 
     </section>
 
+    <!-- footer -->
     <footer class="bg-white lg:grid lg:grid-cols-5">
         <div class="relative block h-32 lg:col-span-2 lg:h-full">
             <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -1348,8 +1509,10 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="/scripts/script.js"></script>
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+    <script src="/scripts/script.js">
+    </script>
 
     <script>
         // Hero Section Tabs
@@ -1539,6 +1702,59 @@
                 }
             }
         });
+    </script>
+
+    <script>
+        // Client Switching Logic
+        function switchClient(index) {
+            const tabs = document.querySelectorAll('.client-tab');
+            const contents = document.querySelectorAll('.case-study-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            tabs[index].classList.add('active');
+            contents[index].classList.add('active');
+        }
+
+        // Slide Navigation Logic
+        function initSlider() {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.slide-indicator');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                indicators.forEach(indicator => {
+                    indicator.classList.remove('active');
+                });
+
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+            }
+
+            // Add click events to indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Auto-advance slides
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 5000);
+
+            // Show first slide
+            showSlide(0);
+        }
+
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initSlider);
     </script>
 
 </body>
