@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact us Page</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="main-wrapper top-0 fixed z-50 w-full">
+        <nav class="navbar">
+            <div class="brand-and-icon">
+                <a href="/" class="navbar-brand"><img src="https://brandingpioneers.com/images/logo.png" alt=""
+                        class="max-w-36"></a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Digital Services
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>SEO Services</h4>
+                                <ul>
+                                    <li><a href="#">SEO</a></li>
+                                    <li><a href="#">Ads and Lead Generation</a></li>
+                                    <li><a href="#">Local SEO</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Brand Building</h4>
+                                <ul>
+                                    <li><a href="#">Social Media Marketing</a></li>
+                                    <li><a href="#">Video Marketing</a></li>
+                                    <li><a href="#">Influencers</a></li>
+                                    <li><a href="#">Content Marketing</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Transform Your Digital Presence</h2>
+                                <button type="button" class="btn">Learn More</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1504221507732-5246c045949b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Digital Services">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Business Solutions
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Sales Automation</h4>
+                                <ul>
+                                    <li><a href="#">CRM</a></li>
+                                    <li><a href="#">Leadmate</a></li>
+                                    <li><a href="#">Call Tracking</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Online Reputation</h4>
+                                <ul>
+                                    <li><a href="#">Google Review</a></li>
+                                    <li><a href="#">Quora Review</a></li>
+                                    <li><a href="#">Testimonials Video Creation</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Automate Your Business Growth</h2>
+                                <button type="button" class="btn">Explore Solutions</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Business Solutions">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Industries
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Primary Industries</h4>
+                                <ul>
+                                    <li><a href="#">Financial Services</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Non-profit Organization</a></li>
+                                    <li><a href="#">Automotive</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="#">Business to Business</a></li>
+                                    <li><a href="#">Business to Client</a></li>
+                                    <li><a href="#">SaaS</a></li>
+                                    <li><a href="#">E-Commerce</a></li>
+                                    <li><a href="#">Hospitality</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Industry-Specific Solutions</h2>
+                                <button type="button" class="btn">Find Your Industry</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1496504175726-c7b4523c7e81?q=80&w=3017&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Industries">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Patient Engagement
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Communication Channels</h4>
+                                <ul>
+                                    <li><a href="#">Whatsapp Marketing</a></li>
+                                    <li><a href="#">Email Marketing</a></li>
+                                    <li><a href="#">SMS Marketing</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Marketing Materials</h4>
+                                <ul>
+                                    <li><a href="#">Newsletter Designing</a></li>
+                                    <li><a href="#">Newsletter Printing</a></li>
+                                    <li><a href="#">Native Advertising</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Engage Your Patients Better</h2>
+                                <button type="button" class="btn">Start Engaging</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Patient Engagement">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md-px-0  mt-24">
+        <div class="relative mb-16 overflow-hidden rounded-3xl bg-gray-900 p-8 lg:p-12">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#4fd1c5_0%,transparent_50%)]">
+                </div>
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,#2dd4bf_0%,transparent_50%)]">
+                </div>
+            </div>
+            <div class="relative">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4">We are <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">Branding
+                        Pioneers</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl max-w-2xl" id="typingText">Your vision, our expertise -
+                    together we'll transform the digital landscape.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="max-w-7xl px-4 md:px-0 pb-16 mx-auto">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Meet Our Leadership</h2>
+                <div class="h-1 w-24 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto"></div>
+            </div>
+
+            <!-- Directors Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20" id="directors-container">
+                <!-- Director 1 -->
+                <div class="director-card group relative h-[28rem] overflow-hidden rounded-2xl bg-white shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500/80 to-gray-900/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-10">
+                    </div>
+
+                    <img src="https://brandingpioneers.com/images/about/arush.webp" alt="Sarah Chen"
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <!-- Content Overlay -->
+                    <div
+                        class="absolute inset-0 z-20 p-8 flex flex-col justify-end transform transition-transform duration-500">
+                        <div
+                            class="card-content transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md mb-2">Arush Thapar</h3>
+                            <p class="text-white hover:text-teal-300 drop-shadow-md text-lg font-medium mb-4">Technical
+                                Director</p>
+                            <div class="max-w-md">
+                                <p
+                                    class="text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    Visionary leader with over 15 years of experience in digital marketing and brand
+                                    strategy.
+                                    Pioneering creative solutions that define the digital landscape.
+                                </p>
+                            </div>
+                            <div
+                                class="flex space-x-4 mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                                <a href="#" class="text-white hover:text-teal-300 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-white hover:text-teal-300 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director 2 -->
+                <div class="director-card group relative h-[28rem] overflow-hidden rounded-2xl bg-white shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500/80 to-gray-900/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-10">
+                    </div>
+
+                    <img src="https://brandingpioneers.com/images/about/nishu.webp" alt="Michael Rodriguez"
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <!-- Content Overlay -->
+                    <div
+                        class="absolute inset-0 z-20 p-8 flex flex-col justify-end transform transition-transform duration-500">
+                        <div
+                            class="card-content transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md mb-2">Nishu Sharma</h3>
+                            <p class="text-white hover:text-teal-300 drop-shadow-md text-lg font-medium mb-4">Managing
+                                Director</p>
+                            <div class="max-w-md">
+                                <p
+                                    class="text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    Tech innovator with a passion for merging creativity with cutting-edge solutions.
+                                    Leading our technical initiatives with forward-thinking strategies.
+                                </p>
+                            </div>
+                            <div
+                                class="flex space-x-4 mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                                <a href="#" class="text-white hover:text-teal-300 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-white hover:text-teal-300 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Banner -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl" id="">
+                <div class="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-gray-900/20 z-10"></div>
+                <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15872.jpg?t=st=1736164047~exp=1736167647~hmac=596c99ad131f50cbb592c1d4c2959946eff4c0a6b5a733dcfe36a9341adbe360&w=1800"
+                    alt="Our Team" class="w-full h-[400px] lg:h-[500px] object-cover" />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-8 z-20">
+                    <div class="max-w-3xl">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Our Amazing Team</h3>
+                        <p class="text-gray-200">United by creativity, driven by innovation. Meet the passionate
+                            individuals
+                            who make digital transformation possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" md:pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Vision Container -->
+            <div class="relative">
+                <!-- Vision Header -->
+                <div class="relative text-center mb-8 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Vision</h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto"></div>
+                </div>
+
+                <!-- Vision Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Left Column - Vision Statement -->
+                    <div class="h-full">
+                        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl h-full flex flex-col">
+                            <div class="mb-6 md:mb-8">
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Pioneering Digital
+                                    Excellence
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    We envision a future where every business, regardless of size, can harness the full
+                                    potential of digital transformation. Our mission is to bridge the gap between
+                                    traditional marketing and cutting-edge digital solutions.
+                                </p>
+                                <div class="h-px w-full bg-gradient-to-r from-teal-400/40 to-transparent"></div>
+                            </div>
+
+                            <!-- Vision Points -->
+                            <div class="space-y-6 flex-grow">
+                                <div class="flex items-start space-x-4 group">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 p-2.5 md:p-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <svg class="w-full h-full text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-base md:text-lg font-semibold text-gray-900 mb-2">Innovation
+                                            First
+                                        </h4>
+                                        <p class="text-sm md:text-base text-gray-600">Constantly pushing boundaries with
+                                            cutting-edge digital strategies and creative solutions.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4 group">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 p-2.5 md:p-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <svg class="w-full h-full text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-base md:text-lg font-semibold text-gray-900 mb-2">Client Success
+                                        </h4>
+                                        <p class="text-sm md:text-base text-gray-600">Dedicated to delivering measurable
+                                            results and exceptional ROI for every client partnership.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4 group">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 p-2.5 md:p-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <svg class="w-full h-full text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-base md:text-lg font-semibold text-gray-900 mb-2">Data-Driven
+                                            Excellence</h4>
+                                        <p class="text-sm md:text-base text-gray-600">Leveraging advanced analytics and
+                                            insights to craft strategies that deliver real impact.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Stats & Achievements -->
+                    <div class="h-full">
+                        <div
+                            class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 md:p-8 text-white shadow-xl overflow-hidden h-full flex flex-col">
+                            <!-- Decorative overlay -->
+                            <div class="absolute inset-0">
+                                <div
+                                    class="absolute inset-0 bg-grid-white/[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="relative z-10 flex flex-col h-full">
+                                <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Our Impact By Numbers</h3>
+
+                                <div class="grid grid-cols-2 gap-4 md:gap-8">
+                                    <div class="text-center p-3 md:p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                                        <div class="text-2xl md:text-4xl font-bold text-teal-400 mb-1 md:mb-2">500+
+                                        </div>
+                                        <div class="text-xs md:text-sm text-gray-300">Successful Projects</div>
+                                    </div>
+                                    <div class="text-center p-3 md:p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                                        <div class="text-2xl md:text-4xl font-bold text-teal-400 mb-1 md:mb-2">98%</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Client Satisfaction</div>
+                                    </div>
+                                    <div class="text-center p-3 md:p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                                        <div class="text-2xl md:text-4xl font-bold text-teal-400 mb-1 md:mb-2">15+</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Industry Awards</div>
+                                    </div>
+                                    <div class="text-center p-3 md:p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                                        <div class="text-2xl md:text-4xl font-bold text-teal-400 mb-1 md:mb-2">24/7
+                                        </div>
+                                        <div class="text-xs md:text-sm text-gray-300">Support Available</div>
+                                    </div>
+                                </div>
+
+                                <!-- Quote -->
+                                <div class="mt-auto pt-6 md:pt-8">
+                                    <div class="p-4 md:p-6 rounded-xl bg-white/5 backdrop-blur-sm">
+                                        <blockquote class="relative">
+                                            <svg class="absolute -top-2 -left-2 h-6 w-6 md:h-8 md:w-8 text-teal-400/20"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                            </svg>
+                                            <p class="text-gray-300 italic text-sm md:text-base ml-4 md:ml-6">
+                                                "Our commitment to digital excellence drives everything we do, from
+                                                strategy
+                                                to execution."
+                                            </p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white lg:grid lg:grid-cols-5">
+        <div class="relative block h-32 lg:col-span-2 lg:h-full">
+            <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Digital Marketing Strategy" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+
+        <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <!-- Contact Information -->
+                <div>
+                    <p>
+                        <span class="text-xs uppercase tracking-wide text-gray-500">Call Us</span>
+
+                        <a href="tel:+919811780937"
+                            class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl">
+                            +91 9811780937
+                        </a>
+                    </p>
+
+                    <ul class="mt-8 space-y-1 text-sm text-gray-700">
+                        <li>Monday to Friday: 9am - 6pm</li>
+                        <li>Saturday: 10am - 4pm</li>
+                    </ul>
+
+                    <!-- Social Media Links -->
+                    <ul class="mt-8 flex gap-6">
+                        <li>
+                            <a href="https://www.facebook.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Facebook</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Instagram</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.398.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.055.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Twitter</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/company/youragency" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">LinkedIn</span>
+
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zm.02 17.5V8h-5v12h5zm7.49-17H9.97C8.17 1 6.9 2.17 6.9 3.9v16.2c0 1.73 1.27 2.9 2.77 2.9h5.04c1.5 0 2.77-1.17 2.77-2.9V8c0-1.73-1.27-2.9-2.77-2.9zm0 18H9.97V8h5.04v12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <!-- Services Section -->
+                    <div>
+                        <p class="font-medium text-gray-900">Services</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">SEO Optimization</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Content Marketing</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Social Media
+                                    Management</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">PPC Advertising</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Email Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div>
+                        <p class="font-medium text-gray-900">Company</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">About Us</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Our Team</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Careers</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Testimonials</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Links and Copyright -->
+            <div class="mt-12 border-t border-gray-100 pt-12">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <ul class="flex flex-wrap gap-4 text-xs">
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-500 transition hover:opacity-75">Cookies</a>
+                        </li>
+                    </ul>
+
+                    <p class="mt-8 text-xs text-gray-500 sm:mt-0">
+                        &copy; 2024. Branding Pioneers . All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/script.js">
+    </script>
+
+    <script>
+
+        const text = document.getElementById('typingText');
+        const originalText = text.textContent;
+        text.textContent = '';
+
+        let charIndex = 0;
+        function typeText() {
+            if (charIndex < originalText.length) {
+                text.textContent += originalText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 50);
+            }
+        }
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeText();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(text);
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+        gsap.from(".rounded-3xl", {
+            duration: 1,
+            y: 60,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".rounded-3xl",
+                start: "top bottom",
+                toggleActions: "play none none reverse"
+            }
+        });
+    </script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animation for director cards
+        const directors = document.querySelectorAll('.director-card');
+        directors.forEach((card, index) => {
+            gsap.from(card, {
+                duration: 1,
+                opacity: 0,
+                y: 50,
+                rotation: 2,
+                delay: index * 0.2,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom-=100",
+                    end: "top center",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        // Animation for team banner
+        gsap.from("#team-banner", {
+            duration: 1.2,
+            opacity: 0,
+            y: 100,
+            scale: 0.95,
+            scrollTrigger: {
+                trigger: "#team-banner",
+                start: "top bottom-=50",
+                end: "top center",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Hover animations for director cards
+        directors.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card.querySelector('img'), {
+                    duration: 0.5,
+                    scale: 1.1,
+                    ease: "power2.out"
+                });
+                gsap.to(card.querySelector('.card-content'), {
+                    duration: 0.5,
+                    y: 0,
+                    opacity: 1,
+                    ease: "power2.out"
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card.querySelector('img'), {
+                    duration: 0.5,
+                    scale: 1,
+                    ease: "power2.out"
+                });
+                gsap.to(card.querySelector('.card-content'), {
+                    duration: 0.5,
+                    y: 30,
+                    ease: "power2.out"
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
