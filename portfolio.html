@@ -26,9 +26,59 @@
     </script>
 
     <style>
-        /* .success-card-overlay {
-            background: linear-gradient(135deg, rgba(45, 226, 214, 0.1) 0%, rgba(20, 255, 236, 0.1) 100%);
-        } */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #075985, #0d9488, #0369a1, #0d9488);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(13, 148, 136, 0.1);
+        }
+
+        .faq-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+
+        .faq-content>div {
+            overflow: hidden;
+        }
+
+        .faq-item.active .faq-content {
+            grid-template-rows: 1fr;
+        }
+
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .active .rotate-icon {
+            transform: rotate(45deg);
+        }
+
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.01);
+        }
     </style>
 
 </head>
@@ -680,6 +730,96 @@
             </div>
         </div>
     </section>
+
+    <!-- FAQ STARTS -->
+    <div class="max-w-7xl mx-auto rounded-3xl gradient-bg py-20 mb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center mb-4 text-white">Frequently Asked Questions</h1>
+            <p class="text-center text-xl text-teal-50 max-w-2xl mx-auto">Find comprehensive answers to common questions
+                about our services and solutions</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 pb-20">
+        <div class="flex flex-col space-y-6" id="faqContainer">
+            <!-- FAQ Items will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const faqs = [
+            {
+                question: "How do I get started with your service?",
+                answer: "Getting started is easy! Simply sign up for an account and follow our quick onboarding process. Our team will guide you through each step, ensuring you have everything you need to succeed with our platform.",
+                image: "https://img.freepik.com/premium-photo/businessman-wearing-black-suit-business-handshake-isolated-background_43157-352.jpg?w=1800"
+            },
+            {
+                question: "What payment methods do you accept?",
+                answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Your payment information is always secure with our encrypted payment system. We also offer flexible billing cycles to suit your needs.",
+                image: null
+            },
+            {
+                question: "Can I upgrade or downgrade my plan anytime?",
+                answer: "Yes, you can modify your subscription plan at any time through your account dashboard. Changes will be reflected in your next billing cycle, and our system will automatically prorate any differences in pricing.",
+                image: "https://img.freepik.com/premium-photo/businessman-wearing-black-suit-business-handshake-isolated-background_43157-352.jpg?w=1800"
+            },
+            {
+                question: "How can I contact customer support?",
+                answer: "Our dedicated customer support team is available 24/7 through multiple channels: live chat for immediate assistance, email support for detailed inquiries, and phone support for urgent matters. We typically respond within 1 hour during business hours.",
+                image: null
+            }
+        ];
+
+        const faqContainer = document.getElementById('faqContainer');
+
+        faqs.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover-scale';
+
+            const content = `
+                <button class="w-full px-8 py-6 flex items-start justify-between focus:outline-none group" onclick="toggleFAQ(${index})">
+                    <span class="text-xl font-semibold text-gray-800 text-left group-hover:text-teal-600 transition-colors">${faq.question}</span>
+                    <span class="rotate-icon text-teal-500 text-3xl flex-shrink-0 ml-4">+</span>
+                </button>
+                <div class="faq-content">
+                    <div>
+                        <div class="px-8 pb-6">
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">${faq.answer}</p>
+                            ${faq.image ? `
+                                <div class="relative overflow-hidden rounded-lg  w-full ">
+                                    <img src="${faq.image}" alt="FAQ illustration" class="w-full h-96 object-cover object-center">
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            faqItem.innerHTML = content;
+            faqContainer.appendChild(faqItem);
+        });
+
+        function toggleFAQ(index) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const currentItem = faqItems[index];
+
+            if (!currentItem.classList.contains('active')) {
+                // Close all other items
+                faqItems.forEach(item => {
+                    if (item !== currentItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Open clicked item
+                currentItem.classList.add('active');
+            } else {
+                // Close clicked item
+                currentItem.classList.remove('active');
+            }
+        }
+    </script>
+    <!-- FAQ ENDS -->
 
     <!-- Testimonials Section -->
     <div class="max-w-7xl mx-auto px-4 py-16">
