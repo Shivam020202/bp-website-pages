@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Contact us Page</title>
+    <title>About us</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -489,6 +489,65 @@
             </div>
         </div>
     </section>
+
+    <!-- Main container with radial gradient background -->
+    <div class="about-section relative max-w-7xl mx-auto w-full">
+        <!-- Custom radial gradient background -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="w-full h-full bg-teal-400 rounded-3xl" style="background: radial-gradient(circle at 30% 20%, #4fd1c5 0%, transparent 50%),
+                            radial-gradient(circle at 70% 60%, #0d9488 10%, transparent 70%),
+                            radial-gradient(circle at 40% 80%, #0f766e 10%, transparent 70%)">
+            </div>
+        </div>
+
+        <!-- Content container -->
+        <div class="relative grid md:grid-cols-2 max-w-7xl mb-10 gap-8 p-6 md:p-12 rounded-3xl">
+            <!-- Content section -->
+            <div class="about-content space-y-6 order-2 md:order-1">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-teal-900">
+                    Branding Pioneers
+                </h1>
+
+                <p class="text-teal-600 text-lg md:text-xl font-light italic">
+                    Shaping tomorrow's technology, today
+                </p>
+
+                <p class="text-gray-500 text-md md:text-base leading-relaxed">
+                    We are a pioneering technology company dedicated to transforming ideas into revolutionary solutions.
+                    With over a decade of excellence in digital innovation, our team of visionary experts works
+                    tirelessly
+                    to create products that redefine industry standards and exceed client expectations.
+                </p>
+
+                <p class="text-gray-500 text-md md:text-base leading-relaxed">
+                    We are a pioneering technology company dedicated to transforming ideas into revolutionary solutions.
+                    With over a decade of excellence in digital innovation, our team of visionary experts works
+                    tirelessly
+                    to create products that redefine industry standards and exceed client expectations.
+                </p>
+                <p class="text-gray-500 text-md md:text-base leading-relaxed">
+                    We are a pioneering technology company dedicated to transforming ideas into revolutionary solutions.
+                    With over a decade of excellence in digital innovation, our team of visionary experts works
+                    tirelessly
+                    to create products that redefine industry standards and exceed client expectations.
+                </p>
+
+                <p class="text-gray-500 text-md md:text-base leading-relaxed">
+                    Our commitment to sustainable technology and human-centered design has earned us recognition as
+                    industry
+                    leaders, trusted by global enterprises and innovative startups alike.
+                </p>
+            </div>
+
+            <!-- Image section -->
+            <div class="company-image relative order-1 md:order-2">
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="https://img.freepik.com/free-photo/low-angle-view-skyscrapers_1359-1136.jpg?t=st=1736315803~exp=1736319403~hmac=bfb9966b27c0d94c09b562bc7bb197a57f0258f1288459f76fb1e00b3ca398e7&w=1800"
+                        alt="Company Innovation" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="py-16 relative overflow-hidden">
         <!-- Enhanced Background Elements -->
@@ -1317,6 +1376,36 @@
                     y: 30,
                     ease: "power2.out"
                 });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Subtle fade-in animations
+            gsap.from('.about-content', {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.about-section',
+                    start: 'top center',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+
+            gsap.from('.company-image', {
+                opacity: 0,
+                x: 30,
+                duration: 1.2,
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: '.about-section',
+                    start: 'top center',
+                    toggleActions: 'play none none reverse'
+                }
             });
         });
     </script>
