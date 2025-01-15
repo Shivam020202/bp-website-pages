@@ -71,6 +71,12 @@
         }
     </style>
     <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #075985, #0d9488, #0369a1, #0d9488);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
         @keyframes gradient {
             0% {
                 background-position: 0% 50%;
@@ -83,12 +89,6 @@
             100% {
                 background-position: 0% 50%;
             }
-        }
-
-        .gradient-bg {
-            background: linear-gradient(-45deg, #075985, #0d9488, #0369a1, #0d9488);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
         }
 
         .faq-item {
@@ -1256,20 +1256,22 @@
     </section>
 
     <!-- FAQ STARTS -->
-    <div class="max-w-7xl mx-auto md:rounded-3xl gradient-bg py-20 mb-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-3xl lg:text-5xl font-bold text-center mb-4 text-white">Frequently Asked Questions</h1>
-            <p class="text-center text-lg lg:text-xl text-teal-50 max-w-2xl mx-auto">Find comprehensive answers to
-                common questions
-                about our services and solutions</p>
+    <section>
+        <div class="max-w-7xl mx-auto md:rounded-3xl gradient-bg py-8 mb-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-2xl lg:text-3xl font-bold text-center mb-4 text-white">Frequently Asked Questions</h1>
+                <p class="text-center text-md lg:text-lg text-teal-50 max-w-2xl mx-auto">Find comprehensive answers to
+                    common questions
+                    about our services and solutions</p>
+            </div>
         </div>
-    </div>
 
-    <div class="max-w-7xl mx-auto px-4 pb-20">
-        <div class="flex flex-col space-y-6" id="faqContainer">
-            <!-- FAQ Items will be inserted here -->
+        <div class="max-w-7xl mx-auto px-4 pb-20">
+            <div class="flex flex-col space-y-6" id="faqContainer">
+                <!-- FAQ Items will be inserted here -->
+            </div>
         </div>
-    </div>
+    </section>
 
     <script>
         const faqs = [
