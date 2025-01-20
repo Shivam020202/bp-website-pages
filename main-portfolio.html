@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 128, 128, 0.15);
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <div class="main-wrapper top-0 fixed z-50 w-full">
+        <nav class="navbar">
+            <div class="brand-and-icon">
+                <a href="/" class="navbar-brand"><img src="https://brandingpioneers.com/images/logo.png" alt=""
+                        class="max-w-36"></a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Digital Services
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>SEO Services</h4>
+                                <ul>
+                                    <li><a href="#">SEO</a></li>
+                                    <li><a href="#">Ads and Lead Generation</a></li>
+                                    <li><a href="#">Local SEO</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Brand Building</h4>
+                                <ul>
+                                    <li><a href="#">Social Media Marketing</a></li>
+                                    <li><a href="#">Video Marketing</a></li>
+                                    <li><a href="#">Influencers</a></li>
+                                    <li><a href="#">Content Marketing</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Transform Your Digital Presence</h2>
+                                <button type="button" class="btn">Learn More</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1504221507732-5246c045949b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Digital Services">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Business Solutions
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Sales Automation</h4>
+                                <ul>
+                                    <li><a href="#">CRM</a></li>
+                                    <li><a href="#">Leadmate</a></li>
+                                    <li><a href="#">Call Tracking</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Online Reputation</h4>
+                                <ul>
+                                    <li><a href="#">Google Review</a></li>
+                                    <li><a href="#">Quora Review</a></li>
+                                    <li><a href="#">Testimonials Video Creation</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Automate Your Business Growth</h2>
+                                <button type="button" class="btn">Explore Solutions</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Business Solutions">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Industries
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Primary Industries</h4>
+                                <ul>
+                                    <li><a href="#">Financial Services</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Non-profit Organization</a></li>
+                                    <li><a href="#">Automotive</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="#">Business to Business</a></li>
+                                    <li><a href="#">Business to Client</a></li>
+                                    <li><a href="#">SaaS</a></li>
+                                    <li><a href="#">E-Commerce</a></li>
+                                    <li><a href="#">Hospitality</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Industry-Specific Solutions</h2>
+                                <button type="button" class="btn">Find Your Industry</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1496504175726-c7b4523c7e81?q=80&w=3017&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Industries">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-link">
+                            Patient Engagement
+                            <span class="drop-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
+                            <div class="sub-menu-item">
+                                <h4>Communication Channels</h4>
+                                <ul>
+                                    <li><a href="#">Whatsapp Marketing</a></li>
+                                    <li><a href="#">Email Marketing</a></li>
+                                    <li><a href="#">SMS Marketing</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h4>Marketing Materials</h4>
+                                <ul>
+                                    <li><a href="#">Newsletter Designing</a></li>
+                                    <li><a href="#">Newsletter Printing</a></li>
+                                    <li><a href="#">Native Advertising</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <h2>Engage Your Patients Better</h2>
+                                <button type="button" class="btn">Start Engaging</button>
+                            </div>
+
+                            <div class="sub-menu-item">
+                                <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Patient Engagement">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mx-auto mt-16 px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Client Portfolio</h1>
+            <div class="h-1 w-24 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto"></div>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-4">Discover our successful partnerships across various
+                industries</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="mb-12">
+            <div class="flex flex-wrap gap-6 justify-center">
+                <select id="industryFilter"
+                    class="px-4 py-2 rounded-lg border border-gray-200 text-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 focus:outline-none transition-colors">
+                    <option value="all">All Industries</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="realestate">Real Estate</option>
+                    <option value="finance">Finance</option>
+                    <option value="ecommerce">E-commerce</option>
+                </select>
+                <select id="serviceFilter"
+                    class="px-4 py-2 rounded-lg border border-gray-200 text-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 focus:outline-none transition-colors">
+                    <option value="all">All Services</option>
+                    <option value="seo">SEO</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="social">Social Media</option>
+                    <option value="content">Content Marketing</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Client Grid -->
+        <div id="clientGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Clients will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const clients = [
+            {
+                name: "HealthPlus Clinic",
+                logo: "https://cdn.brandfetch.io/idy-5oCG6y/w/1093/h/1093/theme/dark/icon.png?c=1bfwsmEH20zzEfSNTed",
+                coverImage: "https://brandingpioneers.com/images/portfolio/nema-care-65292a172bc64.webp",
+                industry: "healthcare",
+                services: ["seo", "webdev", "social"],
+                serviceNames: ["SEO", "Web Development", "Social Media Marketing"],
+                description: "Leading healthcare provider revolutionizing patient care through digital innovation."
+            },
+            {
+                name: "Premium Estates",
+                logo: "https://cdn.brandfetch.io/idy-5oCG6y/w/1093/h/1093/theme/dark/icon.png?c=1bfwsmEH20zzEfSNTed",
+                coverImage: "https://brandingpioneers.com/images/portfolio/nema-care-65292a172bc64.webp",
+                industry: "realestate",
+                services: ["seo", "content", "social"],
+                serviceNames: ["SEO", "Content Marketing", "Social Media Marketing"],
+                description: "Luxury real estate company specializing in premium properties and developments."
+            },
+            {
+                name: "Fortune Finance",
+                logo: "https://cdn.brandfetch.io/idy-5oCG6y/w/1093/h/1093/theme/dark/icon.png?c=1bfwsmEH20zzEfSNTed",
+                coverImage: "https://brandingpioneers.com/images/portfolio/nema-care-65292a172bc64.webp",
+                industry: "finance",
+                services: ["webdev", "seo"],
+                serviceNames: ["Web Development", "SEO"],
+                description: "Innovative financial services firm providing cutting-edge investment solutions."
+            },
+            {
+                name: "ShopNow",
+                logo: "https://cdn.brandfetch.io/idy-5oCG6y/w/1093/h/1093/theme/dark/icon.png?c=1bfwsmEH20zzEfSNTed",
+                coverImage: "https://brandingpioneers.com/images/portfolio/nema-care-65292a172bc64.webp",
+                industry: "ecommerce",
+                services: ["webdev", "social", "content"],
+                serviceNames: ["Web Development", "Social Media Marketing", "Content Marketing"],
+                description: "Next-generation e-commerce platform transforming online shopping experiences."
+            }
+        ];
+
+        function renderClients(filteredClients) {
+            const clientGrid = document.getElementById('clientGrid');
+            clientGrid.innerHTML = '';
+
+            filteredClients.forEach(client => {
+                const clientCard = `
+                    <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative h-48">
+                            <img src="${client.coverImage}" alt="${client.name} Cover" class="w-full h-full object-cover" />
+                            <div class="absolute inset-0 gradient-overlay"></div>
+                            <img src="${client.logo}" alt="${client.name} Logo" class="absolute bottom-4 left-4 w-16 h-16 object-contain bg-white rounded-lg p-2 shadow-md" />
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-2">${client.name}</h2>
+                            <p class="text-gray-600 text-sm mb-4">${client.description}</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">
+                                    ${client.industry.charAt(0).toUpperCase() + client.industry.slice(1)}
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 font-medium mb-2">Services:</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    ${client.serviceNames.map(service =>
+                    `<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">${service}</span>`
+                ).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                clientGrid.innerHTML += clientCard;
+            });
+        }
+
+        function filterClients() {
+            const industryFilter = document.getElementById('industryFilter').value;
+            const serviceFilter = document.getElementById('serviceFilter').value;
+
+            let filteredClients = clients;
+
+            if (industryFilter !== 'all') {
+                filteredClients = filteredClients.filter(client => client.industry === industryFilter);
+            }
+
+            if (serviceFilter !== 'all') {
+                filteredClients = filteredClients.filter(client => client.services.includes(serviceFilter));
+            }
+
+            renderClients(filteredClients);
+        }
+
+        // Add event listeners to filters
+        document.getElementById('industryFilter').addEventListener('change', filterClients);
+        document.getElementById('serviceFilter').addEventListener('change', filterClients);
+
+        // Initial render
+        renderClients(clients);
+    </script>
+</body>
+
+</html>
