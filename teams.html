@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact us Page</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .mega-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            z-index: 50;
+            padding: 2rem 0;
+            margin-top: 1px;
+        }
+
+        .has-mega-menu:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+            transition: width 0.3s ease;
+        }
+
+        .has-mega-menu:hover .nav-highlight::after {
+            width: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            .mega-menu {
+                display: none !important;
+            }
+        }
+    </style>
+    <style>
+        .carousel-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .team-card {
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .info-box {
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .info-box {
+            background: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="bg-white shadow-sm fixed z-50 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-400 rounded-lg"></div>
+                    <span
+                        class="text-2xl font-bold bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent">
+                        Branding Pioneers
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="sm:flex items-center space-x-8 h-full">
+                    <!-- Services Menu -->
+                    <div class="has-mega-menu group relative h-full flex  items-center">
+                        <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
+                            Services
+                        </button>
+                        <div class="mega-menu top-[60px]">
+                            <div class="container mx-auto px-4">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-search-alt-2 mr-2'></i>
+                                            SEO & Analytics
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Keyword Research
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Technical SEO
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Competitor Analysis
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-line-chart mr-2'></i>
+                                            Advertising
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Google Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Social Media Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Retargeting
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-edit mr-2'></i>
+                                            Content Marketing
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Blog Management
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Video Production
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Content Strategy
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-lg border border-teal-200">
+                                        <h3 class="text-lg font-bold text-teal-600 mb-3">Custom Solutions</h3>
+                                        <p class="text-sm text-gray-600 mb-4">Need a tailored marketing solution? Let's
+                                            create your perfect strategy.</p>
+                                        <button
+                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                                            Schedule Consultation
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Menu Items -->
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Case
+                        Studies</a>
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Resources</a>
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">About</a>
+
+                    <!-- CTA Button -->
+                    <button
+                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all ">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600">
+                    <i class='bx bx-menu text-2xl'></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden  hidden absolute w-full bg-white shadow-md">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Services</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Case Studies</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Resources</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">About</a>
+                <button class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="h-20"></div>
+
+    <section class="relative h-fit bg-white overflow-hidden">
+        <!-- Grid background pattern -->
+        <div class="absolute inset-0 z-0 grid grid-cols-12 gap-4 transform -skew-y-3 opacity-10">
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+            <div class="col-span-1 bg-teal-400 h-full"></div>
+            <div class="col-span-1 bg-gray-300 h-full"></div>
+        </div>
+
+        <div class="container relative z-10 mx-auto px-4 h-full flex items-center">
+            <div class="max-w-2xl mx-auto lg:max-w-4xl pt-20 pb-32">
+                <h1 class="text-2xl  text-center md:text-5xl font-extrabold text-gray-700 mb-6 leading-tight">
+                    We've got an <span class="relative inline-block">entire</span>
+                    <span class="relative inline-block">team</span>
+                    dedicated
+                    <br class="hidden md:block">
+                    to <span class="highlight-squiggle">supporting you</span> and your business
+                </h1>
+
+                <p class="text-lg text-center md:text-xl text-gray-400 mb-8">
+                    Get help 24/7, with our award-winning support network of payments experts.
+                </p>
+
+                <div class="flex justify-center w-full flex-col sm:flex-row gap-4">
+                    <a href="#"
+                        class="bg-teal-400 text-white px-8 py-2 my-auto rounded-lg font-medium hover:bg-teal-500 transition-colors text-center">
+                        Book a call
+                    </a>
+                    <a href="#"
+                        class="border-2 border-gray-900 text-gray-900 px-8 py-2 rounded-lg font-medium hover:bg-gray-900 hover:text-white transition-colors text-center">
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative w-full py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="font-bold text-4xl pb-2">Our Team</h1>
+            <p class="pb-4">Meet our very talented and expert team</p>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 pt-6">
+            <!-- Carousel container with auto-scroll -->
+            <div class="carousel-container overflow-hidden">
+                <div class="carousel-track flex space-x-6 pb-8">
+                    <!-- Team Member Card 1 -->
+                    <div class="team-card flex-none w-72 relative group">
+                        <div
+                            class="relative overflow-hidden rounded-xl bg-white transform transition-all duration-300 ease-out hover:shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Team member"
+                                class="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 pb-20 bg-blue-400" />
+                            <div
+                                class="info-box absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform transition-all duration-300">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Emmy Rosum</h3>
+                                <p class="text-sm text-gray-600">Customer Success Agent</p>
+                                <div
+                                    class="social-links mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 2 -->
+                    <div class="team-card flex-none w-72 relative group">
+                        <div
+                            class="relative overflow-hidden rounded-xl bg-white transform transition-all duration-300 ease-out hover:shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Team member"
+                                class="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 pb-20 bg-blue-400" />
+                            <div
+                                class="info-box absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform transition-all duration-300">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Sophie Chamberlain</h3>
+                                <p class="text-sm text-gray-600">Specialized Support</p>
+                                <div
+                                    class="social-links mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 3 -->
+                    <div class="team-card flex-none w-72 relative group">
+                        <div
+                            class="relative overflow-hidden rounded-xl bg-white transform transition-all duration-300 ease-out hover:shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Team member"
+                                class="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 pb-20 bg-blue-400" />
+                            <div
+                                class="info-box absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform transition-all duration-300">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Lana Steiner</h3>
+                                <p class="text-sm text-gray-600">VP of Customer Success</p>
+                                <div
+                                    class="social-links mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 4 -->
+                    <div class="team-card flex-none w-72 relative group">
+                        <div
+                            class="relative overflow-hidden rounded-xl bg-white transform transition-all duration-300 ease-out hover:shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Team member"
+                                class="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 pb-20 bg-blue-400" />
+                            <div
+                                class="info-box absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform transition-all duration-300">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Orlando Diggs</h3>
+                                <p class="text-sm text-gray-600">Customer Success Lead</p>
+                                <div
+                                    class="social-links mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 5 -->
+                    <div class="team-card flex-none w-72 relative group">
+                        <div
+                            class="relative overflow-hidden rounded-xl bg-white transform transition-all duration-300 ease-out hover:shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Team member"
+                                class="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 pb-20 bg-blue-400" />
+                            <div
+                                class="info-box absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform transition-all duration-300">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Sasha Kindred</h3>
+                                <p class="text-sm text-gray-600">Customer Success Lead</p>
+                                <div
+                                    class="social-links mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+                                        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Mobile menu handling
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+    <!-- Include GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        // Clone cards for infinite scroll
+        const track = document.querySelector('.carousel-track');
+        const cards = document.querySelectorAll('.team-card');
+
+        // Clone cards and append to track
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            track.appendChild(clone);
+        });
+
+        // Auto scroll animation
+        let scrollAnimation;
+        let isPaused = false;
+
+        function startScrolling() {
+            const scrollWidth = track.scrollWidth / 2; // Half because we cloned the items
+
+            scrollAnimation = gsap.to(track, {
+                x: -scrollWidth,
+                duration: 20,
+                ease: "none",
+                repeat: -1,
+                onRepeat: () => {
+                    gsap.set(track, { x: 0 });
+                }
+            });
+        }
+
+        // Hover effects with GSAP
+        document.querySelectorAll('.team-card').forEach(card => {
+            const infoBox = card.querySelector('.info-box');
+
+            // Create hover animation
+            card.addEventListener('mouseenter', () => {
+                if (scrollAnimation) {
+                    scrollAnimation.pause();
+                }
+                gsap.to(infoBox, {
+                    height: "auto",
+                    duration: 0.2,
+                    ease: "power1.out"
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                if (scrollAnimation && !isPaused) {
+                    scrollAnimation.play();
+                }
+                gsap.to(infoBox, {
+                    height: "auto",
+                    duration: 0.2,
+                    ease: "power1.in"
+                });
+            });
+        });
+
+        // Start auto-scrolling
+        startScrolling();
+
+        // Pause on container hover
+        const container = document.querySelector('.carousel-container');
+
+        container.addEventListener('mouseenter', () => {
+            isPaused = true;
+            if (scrollAnimation) {
+                scrollAnimation.pause();
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isPaused = false;
+            if (scrollAnimation) {
+                scrollAnimation.play();
+            }
+        });
+
+        // Draggable functionality
+        Draggable.create(track, {
+            type: "x",
+            bounds: { minX: -track.scrollWidth / 2, maxX: 0 },
+            edgeResistance: 0.65,
+            inertia: true,
+            onDragStart: () => {
+                if (scrollAnimation) {
+                    scrollAnimation.pause();
+                }
+            },
+            onDragEnd: () => {
+                if (!isPaused) {
+                    scrollAnimation.play();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
