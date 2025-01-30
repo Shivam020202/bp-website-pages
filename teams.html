@@ -90,18 +90,61 @@
             background: rgba(255, 255, 255, 0.95);
         }
     </style>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
 
 </head>
 
 <body>
+
     <nav class="bg-white shadow-sm fixed z-50 w-full">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <a href="#" class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-400 rounded-lg"></div>
-                    <span
-                        class="text-2xl font-bold bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent">
+                    <img src="assets/logo.png" alt="branding pioneers" class="h-10 w-10" />
+                    <span class="text-2xl font-bold text-gray-800">
                         Branding Pioneers
                     </span>
                 </a>
@@ -397,6 +440,669 @@
         </div>
     </div>
 
+    <div class="relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div
+            class="absolute w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob -top-10 -left-4">
+        </div>
+        <div
+            class="absolute w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000 top-0 -right-4">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 py-20">
+            <!-- Header Section -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-700 mb-4 tracking-tight">Our Dynamic Teams</h2>
+                <p class="text-xl text-gray-600">Where Innovation Meets Excellence</p>
+            </div>
+
+            <!-- Teams Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Digital Advertising Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">Digital Advertising</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-pink-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-ads-icon.png" alt="Digital Advertising Icon"
+                                    class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Crafting data-driven campaigns that convert clicks into
+                                customers</p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"Success is not final, failure is not fatal: it
+                                        is
+                                        the courage to continue that counts."</p>
+                                    <p class="text-gray-400 text-sm text-right">- Winston Churchill</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">200%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-red-500 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
+                                                viewBox="0 0 64 64" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M38.2653 15.3929L15.8615 25.0216L24.2661 45.2543L46.2684 35.6506L38.2653 15.3929Z"
+                                                    fill="#2A2941" />
+                                                <path
+                                                    d="M19.7502 52.232L24.1406 43.7788L26.2229 45.3544L26.6996 35.0754L18.3703 41.0027L20.8039 41.9531L16.1375 50.1062L19.7502 52.232Z"
+                                                    fill="#2A2941" />
+                                                <path
+                                                    d="M26.6996 35.0755L26.2229 45.3544L24.1406 43.7788L19.7251 52.232L16.1375 50.1062L20.8039 41.9531L18.3452 41.0027L26.6996 35.0755ZM27.8035 33.0747L26.1226 34.2752L17.7933 40.2024L16.288 41.2778L18.0191 41.9531L19.3739 42.4783L15.2845 49.606L14.8078 50.4563L15.6608 50.9565L19.2484 53.0823L20.1516 53.6325L20.6534 52.6822L24.5169 45.2793L25.6459 46.1297L27.1763 47.2801L27.2766 45.3794L27.7533 35.1005L27.8035 33.0747Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M48.4511 31.8742L40.1469 11.5415L17.7933 21.1702L26.1979 41.4279L48.4511 31.8742Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M25.7714 42.4033L16.8149 20.77L40.5483 10.5411L49.4295 32.2494L25.7714 42.4033ZM18.7718 21.5703L26.5993 40.4275L47.4727 31.4741L39.7204 12.5419L18.7718 21.5703Z"
+                                                    fill="#2A2941" />
+                                                <path
+                                                    d="M41.9679 16.0395L19.5499 25.4126L20.1325 26.7962L42.5504 17.4231L41.9679 16.0395Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M20.8792 24.1963L22.5601 23.4711L21.9579 22.0455L20.277 22.7458L20.8792 24.1963Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M23.8145 22.9959L25.4954 22.2957L24.8933 20.8701L23.1873 21.5454L23.8145 22.9959Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M26.6996 21.7955L28.3805 21.0702L27.7784 19.6447L26.0975 20.3449L26.6996 21.7955Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M35.4303 23.9962C35.4303 23.9962 38.4158 22.8457 39.4193 25.2967C40.3727 27.5975 37.4875 28.898 37.4875 28.898C37.2868 27.9477 36.4589 25.1966 35.4303 23.9962Z"
+                                                    fill="#A694FE" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M35.3049 23.6961L34.9034 23.8462L35.1794 24.1713C36.1579 25.3467 36.9607 28.0227 37.1865 28.9231L37.2868 29.2982L37.6381 29.1482C38.1649 28.8981 38.6416 28.5479 39.043 28.1478C39.4695 27.7727 39.7455 27.2975 39.8709 26.7473C39.9963 26.2221 39.9462 25.6468 39.7204 25.1467C39.5197 24.6215 39.1684 24.1713 38.6918 23.8462C38.2151 23.521 37.6381 23.371 37.061 23.396C36.4589 23.396 35.8819 23.496 35.3049 23.6961ZM35.9571 24.1463C36.3084 24.0462 36.6847 24.0212 37.061 24.0212C37.5126 23.9962 37.9642 24.1213 38.3405 24.3714C38.7168 24.6215 38.9928 24.9716 39.1434 25.3968C39.319 25.7969 39.3441 26.2221 39.2437 26.6472C39.1433 27.0724 38.9176 27.4475 38.5914 27.7226C38.3405 27.9727 38.0395 28.2228 37.7133 28.3979C37.337 26.8973 36.7349 25.4718 35.9571 24.1463Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M29.5597 31.274C28.1547 30.5487 27.6028 28.773 27.653 27.1224C30.7388 26.122 33.4985 24.6715 35.631 22.1455C37.8388 24.1213 38.767 26.2471 38.8423 29.7734C35.0289 29.2982 32.1437 30.1736 29.5597 31.274Z"
+                                                    fill="#32EDBB" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M29.4091 31.5491L29.5346 31.6241L29.6851 31.5741C32.219 30.4737 35.054 29.6233 38.8172 30.0985L39.1935 30.1485V29.7984C39.1183 26.147 38.1649 23.9712 35.8819 21.9454L35.631 21.7203L35.4052 21.9704C33.3229 24.4464 30.6134 25.8719 27.5777 26.8473L27.377 26.9223V27.1224C27.3017 28.8981 27.9289 30.7738 29.4091 31.5491ZM29.5848 30.9238C28.4307 30.2486 27.9791 28.773 27.9791 27.3225C30.9395 26.3221 33.5738 24.9216 35.6561 22.5707C37.5628 24.3463 38.3907 26.3221 38.5162 29.4233C34.8784 29.0231 32.0936 29.8734 29.5848 30.9238Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M27.7784 28.5979C27.7784 28.5979 26.2229 29.1481 26.7247 30.2735C27.2265 31.374 28.7067 30.5987 28.7067 30.5987C28.23 29.9984 27.9289 29.3232 27.7784 28.5979Z"
+                                                    fill="#4C5EFD" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M28.0795 28.5229L28.0042 28.1727L27.653 28.2978C27.3519 28.4228 27.0759 28.5729 26.8501 28.773C26.5992 28.948 26.4236 29.1981 26.3484 29.4982C26.2731 29.7983 26.2982 30.0985 26.4236 30.3736C26.524 30.5987 26.6745 30.7987 26.9003 30.9238C27.1261 31.0488 27.3519 31.1239 27.6028 31.1239C28.0293 31.1239 28.4558 31.0238 28.8321 30.8487L29.1582 30.6737L28.9325 30.3736C28.506 29.8484 28.23 29.1981 28.0795 28.5229ZM27.5526 29.0481C27.7031 29.5483 27.9038 29.9984 28.1798 30.4486C28.0544 30.4736 27.954 30.5236 27.8286 30.5236C27.678 30.5736 27.5024 30.5486 27.3519 30.4736C27.2014 30.3986 27.0759 30.2985 27.0007 30.1485C26.9254 29.9984 26.9254 29.8234 26.9756 29.6733C27.0257 29.5232 27.1261 29.3732 27.2515 29.2731C27.3519 29.1731 27.4522 29.1231 27.5526 29.0481Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M31.09 30.6988C31.8678 32.0493 32.3695 33.5499 32.5702 35.1005L35.3048 33.9C34.502 32.6996 33.8497 31.3741 33.3981 29.9985C32.5953 30.1736 31.8176 30.4237 31.09 30.6988Z"
+                                                    fill="#A694FE" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M30.9646 30.4236L30.6384 30.5487L30.789 30.8488C31.5416 32.1743 32.0434 33.6248 32.2441 35.1254L32.2943 35.5756L35.8066 34.05L35.6059 33.7499C34.8031 32.5494 34.1759 31.2739 33.7243 29.9234L33.6239 29.6483L33.348 29.6983C32.5451 29.8734 31.7423 30.1235 30.9646 30.4236ZM31.5416 30.8488C32.0935 30.6487 32.6455 30.4736 33.2225 30.3486C33.649 31.549 34.201 32.6745 34.8783 33.7499L32.8462 34.6252C32.5953 33.2997 32.1688 32.0492 31.5416 30.8488Z"
+                                                    fill="#2A2941" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M28.4307 26.7973C28.4808 28.3479 29.083 29.8234 30.1367 30.9989C30.1868 31.0489 30.2872 31.0989 30.3625 31.0989C30.4377 31.0989 30.5381 31.0739 30.5882 30.9989C30.6384 30.9239 30.6886 30.8738 30.6886 30.7738C30.6886 30.6988 30.6635 30.6237 30.5882 30.5487C29.6349 29.4983 29.108 28.1728 29.0579 26.7973C29.0579 26.7223 29.0328 26.6472 28.9575 26.5722C28.9073 26.5222 28.807 26.4722 28.7317 26.4722C28.6565 26.4722 28.5561 26.4972 28.5059 26.5722C28.4558 26.6472 28.4307 26.7223 28.4307 26.7973Z"
+                                                    fill="#2A2941" />
+                                                <path
+                                                    d="M21.5063 52.232L25.9218 43.7788L27.9791 45.3544L28.4557 35.0754L20.1516 41.0027L22.5851 41.9531L17.9187 50.1062L21.5063 52.232Z"
+                                                    fill="#FEC34E" />
+                                                <path
+                                                    d="M28.4558 35.0755L27.9791 45.3544L25.8968 43.7788L21.4813 52.232L17.9187 50.1062L22.5851 41.9531L20.1265 41.0027L28.4558 35.0755ZM29.5597 33.0747L27.8787 34.2752L19.5495 40.2024L18.0442 41.2778L19.7753 41.9531L21.13 42.4783L17.0406 49.606L16.564 50.4563L17.417 50.9565L21.0046 53.0823L21.9078 53.6325L22.4095 52.6822L26.2731 45.2793L27.4021 46.1297L28.9324 47.2801L29.0328 45.3794L29.5095 35.1005L29.5597 33.0747Z"
+                                                    fill="#2A2941" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">ROI Increase</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">500+</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-red-500 to-yellow-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Campaigns</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">Web Development</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-web-icon.png" alt="Web Development Icon"
+                                    class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Building digital experiences that leave lasting
+                                impressions
+                            </p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"Design is not just what it looks like and
+                                        feels
+                                        like. Design is how it works."</p>
+                                    <p class="text-gray-400 text-sm text-right">- Steve Jobs</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">100+</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Websites Launched</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">98%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Performance Score</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphic Design Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">Graphic Design</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-teal-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-design-icon.png" alt="Graphic Design Icon"
+                                    class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Where creativity meets strategy to tell your brand's
+                                story
+                            </p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"Simplicity is the ultimate sophistication."
+                                    </p>
+                                    <p class="text-gray-400 text-sm text-right">- Leonardo da Vinci</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">1000+</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Designs Created</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">95%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Client Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">Social Media</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-violet-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-social-icon.png" alt="Social Media Icon"
+                                    class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Engaging audiences and building communities that matter
+                            </p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"Social media is not a media. The key is to
+                                        listen,
+                                        engage, and build relationships."</p>
+                                    <p class="text-gray-400 text-sm text-right">- David Alston</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">150%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Engagement Growth</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">1M+</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Monthly Reach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">SEO</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-seo-icon.png" alt="SEO Icon" class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Optimizing visibility to help you reach the right
+                                audience
+                            </p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"The best place to hide a dead body is page 2
+                                        of
+                                        Google search results."</p>
+                                    <p class="text-gray-400 text-sm text-right">- Anonymous</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">50+</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Top Rankings</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">300%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Traffic Growth</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Services Team -->
+                <div class="group">
+                    <div
+                        class="bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 p-0.5 rounded-2xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
+                            <div class="flex items-center justify-between">
+                                <div class="relative">
+                                    <h3 class="text-2xl font-bold text-white mb-2">Client Services</h3>
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-fuchsia-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-pink-500"></div>
+                                    </div>
+                                </div>
+                                <img src="path-to-your-client-service-icon.png" alt="Client Services Icon"
+                                    class="w-12 h-12 object-contain">
+                            </div>
+
+                            <p class="text-gray-300 mt-6 mb-6">Your success partners, available 24/7</p>
+
+                            <div class="relative overflow-hidden rounded-xl mb-6">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 opacity-20">
+                                </div>
+                                <div class="relative bg-gray-800 rounded-xl p-4">
+                                    <p class="text-gray-100 italic mb-2">"Customer service shouldn't just be a
+                                        department,
+                                        it should be the entire company."</p>
+                                    <p class="text-gray-400 text-sm text-right">- Tony Hsieh</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">98%</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Satisfaction Rate</p>
+                                </div>
+                                <div
+                                    class="bg-gray-800 rounded-lg p-4 transform hover:-translate-y-1 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <p class="text-white font-bold">24/7</p>
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-r from-fuchsia-500 to-pink-500 flex items-center justify-center">
+                                            <img src="path-to-your-achievement-icon.png" alt="Achievement Icon"
+                                                class="w-4 h-4">
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="text-center mt-20">
+                <h3 class="text-3xl font-bold text-white mb-12">Our Collective Impact</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-pink-500 to-red-500 p-0.5 rounded-2xl">
+                        <div class="bg-gray-900 rounded-2xl p-8">
+                            <div
+                                class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 mb-2">
+                                500+</div>
+                            <p class="text-gray-300">Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-500 p-0.5 rounded-2xl">
+                        <div class="bg-gray-900 rounded-2xl p-8">
+                            <div
+                                class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-purple-500 mb-2">
+                                1000+</div>
+                            <p class="text-gray-300">Projects Delivered</p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500 to-emerald-500 p-0.5 rounded-2xl">
+                        <div class="bg-gray-900 rounded-2xl p-8">
+                            <div
+                                class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-500 to-emerald-500 mb-2">
+                                98%</div>
+                            <p class="text-gray-300">Client Retention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="text-center mt-20 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-violet-500 to-purple-500 p-0.5 rounded-2xl">
+                    <div class="bg-gray-900 rounded-2xl p-12">
+                        <img src="path-to-your-mission-icon.png" alt="Mission Icon" class="w-16 h-16 mx-auto mb-6">
+                        <p class="text-2xl text-gray-100 italic mb-6">"Innovation distinguishes between a leader and a
+                            follower. We choose to lead, creating digital solutions that transform businesses and
+                            inspire
+                            change."</p>
+                        <p class="text-gray-400">Our Guiding Philosophy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <!-- Column 1: Brand & Contact -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-10 h-10 text-teal-400" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L44 40H4L24 4Z" fill="currentColor" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span class="ml-3 text-2xl font-bold text-teal-400">DigiGrowth</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 mt-1 mr-3 text-teal-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p class="text-sm">
+                                123 Digital Lane<br>
+                                Tech Valley, CA 94016<br>
+                                United States
+                            </p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-teal-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="mt-8">
+                        <h4 class="text-teal-400 font-semibold mb-4">Follow Our Journey</h4>
+                        <div class="flex space-x-4">
+                            <!-- Social icons from previous code -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Industries -->
+                <div>
+                    <h4 class="text-teal-400 font-semibold mb-6">Industries</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-teal-400 transition">E-commerce</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Healthcare</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">FinTech</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Education</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Real Estate</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">SaaS</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h4 class="text-teal-400 font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-teal-400 transition">Search Engine Marketing</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Social Media Management</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Web Development</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Conversion Optimization</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Brand Strategy</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Marketing Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Company -->
+                <div>
+                    <h4 class="text-teal-400 font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-teal-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Our Team</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: CTA & Reviews -->
+                <div>
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h4 class="text-teal-400 font-semibold mb-4">Free Strategy Session</h4>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Work email"
+                                class="w-full p-2 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-400 outline-none">
+                            <button
+                                class="w-full bg-teal-600 hover:bg-teal-500 text-white py-2 px-4 rounded-lg transition">
+                                Book Free Call
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Reviews -->
+                    <div class="mt-8 p-6 bg-gray-800 rounded-xl">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-sm">4.9/5 (128 reviews)</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-teal-400 hover:text-teal-300 text-sm">
+                            Leave a Review
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-12"></div>
+
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Map -->
+                <div class="h-48 rounded-xl overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201880.51115438552!2d-122.57768437848272!3d37.757617097271385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1717034379190!5m2!1sen!2sus"
+                        class="w-full h-full filter grayscale hover:grayscale-0 transition" style="border:0;"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="flex items-center justify-center flex-wrap gap-6">
+                    <img src="https://via.placeholder.com/120x40?text=Google+Partner" alt="Badge"
+                        class="h-8 opacity-80 hover:opacity-100 transition">
+                    <img src="https://via.placeholder.com/120x40?text=Meta+Verified" alt="Badge"
+                        class="h-8 opacity-80 hover:opacity-100 transition">
+                    <img src="https://via.placeholder.com/120x40?text=Clutch+Top+100" alt="Badge"
+                        class="h-8 opacity-80 hover:opacity-100 transition">
+                </div>
+
+                <!-- Legal Links -->
+                <div class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+                    <a href="#" class="hover:text-teal-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-teal-400 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-teal-400 transition">Cookie Policy</a>
+                    <a href="#" class="hover:text-teal-400 transition">Accessibility</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mt-8 text-gray-500 text-sm">
+                © 2024 DigiGrowth. All rights reserved. Crafted with ❤️ in Silicon Valley
+            </div>
+        </div>
+    </footer>
+
 
     <script>
         // Mobile menu handling
@@ -517,6 +1223,23 @@
                     scrollAnimation.play();
                 }
             }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.group');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            cards.forEach(card => observer.observe(card));
         });
     </script>
 </body>
