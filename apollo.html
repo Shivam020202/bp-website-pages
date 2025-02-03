@@ -24,7 +24,57 @@
             }
         }
     </script>
+  <style>
+    @media (max-width: 768px) {
+        .desk-menu {
+            /* background-color: #000; */
+            display: none !important;
+        }
+    }
 
+    .mega-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        z-index: 50;
+        padding: 2rem 0;
+        margin-top: 1px;
+    }
+
+    .has-mega-menu:hover .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-highlight::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+        transition: width 0.3s ease;
+    }
+
+    .has-mega-menu:hover .nav-highlight::after {
+        width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+        .mega-menu {
+            display: none !important;
+        }
+    }
+</style>
     <style>
         @keyframes gradient {
             0% {
@@ -85,185 +135,141 @@
 
 <body>
     <!-- Navbar -->
-    <div class="main-wrapper top-0 fixed z-50 w-full">
-        <nav class="navbar">
-            <div class="brand-and-icon">
-                <a href="/" class="navbar-brand"><img src="https://brandingpioneers.com/images/logo.png" alt=""
-                        class="max-w-36"></a>
-                <button type="button" class="navbar-toggler">
-                    <i class="fas fa-bars"></i>
+    <nav class="bg-white shadow-sm fixed z-50 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="assets/logo.png" alt="branding pioneers" class="h-10 w-10" />
+                    <span class="text-2xl font-bold text-gray-800">
+                        Branding Pioneers
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="desk-menu sm:flex items-center space-x-8 h-full">
+                    <!-- Services Menu -->
+                    <div class="has-mega-menu group relative h-full flex  items-center">
+                        <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
+                            Services
+                        </button>
+                        <div class="mega-menu top-[60px]">
+                            <div class="container mx-auto px-4">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-search-alt-2 mr-2'></i>
+                                            SEO & Analytics
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Keyword Research
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Technical SEO
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Competitor Analysis
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-line-chart mr-2'></i>
+                                            Advertising
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Google Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Social Media Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Retargeting
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-edit mr-2'></i>
+                                            Content Marketing
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Blog Management
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Video Production
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Content Strategy
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-lg border border-teal-200">
+                                        <h3 class="text-lg font-bold text-teal-600 mb-3">Custom Solutions</h3>
+                                        <p class="text-sm text-gray-600 mb-4">Need a tailored marketing solution? Let's
+                                            create your perfect strategy.</p>
+                                        <button
+                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                                            Schedule Consultation
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Menu Items -->
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Case
+                        Studies</a>
+                    <a href="/teams.html" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Our
+                        Team</a>
+                    <a href="/about-us.html"
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">About</a>
+
+                    <!-- CTA Button -->
+                    <button
+                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all ">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600">
+                    <i class='bx bx-menu text-2xl'></i>
                 </button>
             </div>
+        </div>
 
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="menu-link">
-                            Digital Services
-                            <span class="drop-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
-                            <div class="sub-menu-item">
-                                <h4>SEO Services</h4>
-                                <ul>
-                                    <li><a href="#">SEO</a></li>
-                                    <li><a href="#">Ads and Lead Generation</a></li>
-                                    <li><a href="#">Local SEO</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h4>Brand Building</h4>
-                                <ul>
-                                    <li><a href="#">Social Media Marketing</a></li>
-                                    <li><a href="#">Video Marketing</a></li>
-                                    <li><a href="#">Influencers</a></li>
-                                    <li><a href="#">Content Marketing</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h2>Transform Your Digital Presence</h2>
-                                <button type="button" class="btn">Learn More</button>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <img loading="lazy" src="https://images.unsplash.com/photo-1504221507732-5246c045949b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Digital Services">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" class="menu-link">
-                            Business Solutions
-                            <span class="drop-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
-                            <div class="sub-menu-item">
-                                <h4>Sales Automation</h4>
-                                <ul>
-                                    <li><a href="#">CRM</a></li>
-                                    <li><a href="#">Leadmate</a></li>
-                                    <li><a href="#">Call Tracking</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h4>Online Reputation</h4>
-                                <ul>
-                                    <li><a href="#">Google Review</a></li>
-                                    <li><a href="#">Quora Review</a></li>
-                                    <li><a href="#">Testimonials Video Creation</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h2>Automate Your Business Growth</h2>
-                                <button type="button" class="btn">Explore Solutions</button>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <img loading="lazy" src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Business Solutions">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" class="menu-link">
-                            Industries
-                            <span class="drop-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
-                            <div class="sub-menu-item">
-                                <h4>Primary Industries</h4>
-                                <ul>
-                                    <li><a href="#">Financial Services</a></li>
-                                    <li><a href="#">Real Estate</a></li>
-                                    <li><a href="#">Non-profit Organization</a></li>
-                                    <li><a href="#">Automotive</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h4>Services</h4>
-                                <ul>
-                                    <li><a href="#">Business to Business</a></li>
-                                    <li><a href="#">Business to Client</a></li>
-                                    <li><a href="#">SaaS</a></li>
-                                    <li><a href="#">E-Commerce</a></li>
-                                    <li><a href="#">Hospitality</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h2>Industry-Specific Solutions</h2>
-                                <button type="button" class="btn">Find Your Industry</button>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <img loading="lazy" src="https://images.unsplash.com/photo-1496504175726-c7b4523c7e81?q=80&w=3017&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Industries">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" class="menu-link">
-                            Patient Engagement
-                            <span class="drop-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="sub-menu transform transition-transform duration-300 ease-in-out">
-                            <div class="sub-menu-item">
-                                <h4>Communication Channels</h4>
-                                <ul>
-                                    <li><a href="#">Whatsapp Marketing</a></li>
-                                    <li><a href="#">Email Marketing</a></li>
-                                    <li><a href="#">SMS Marketing</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h4>Marketing Materials</h4>
-                                <ul>
-                                    <li><a href="#">Newsletter Designing</a></li>
-                                    <li><a href="#">Newsletter Printing</a></li>
-                                    <li><a href="#">Native Advertising</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <h2>Engage Your Patients Better</h2>
-                                <button type="button" class="btn">Start Engaging</button>
-                            </div>
-
-                            <div class="sub-menu-item">
-                                <img loading="lazy" src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Patient Engagement">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="/contact-us.html">Contact</a>
-                    </li>
-                </ul>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden  hidden absolute w-full bg-white shadow-md">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Services</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Case Studies</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Resources</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">About</a>
+                <button class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2">
+                    Get Started
+                </button>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+    <div class="h-20"></div>
 
     <!-- Hero Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-0 mt-24">
