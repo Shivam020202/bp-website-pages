@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Industry</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .desk-menu {
+                /* background-color: #000; */
+                display: none !important;
+            }
+        }
+
+        .mega-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            z-index: 50;
+            padding: 2rem 0;
+            margin-top: 1px;
+        }
+
+        .has-mega-menu:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+            transition: width 0.3s ease;
+        }
+
+        .has-mega-menu:hover .nav-highlight::after {
+            width: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            .mega-menu {
+                display: none !important;
+            }
+        }
+    </style>
+       
+   
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #002F6C; /* Dark Blue Background */
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: -110px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.6;   
+}
+
+/* Brand Slider */
+.brand-slider {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.swiper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    max-width: 150px;
+    display: block;
+    margin: auto;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+}
+
+/* Card Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+    background-color: white;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading */
+.card h2 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 15px;      
+    font-weight: bold;
+}
+
+/* Image */
+.card-image img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Link */
+.card-link {
+    display: block;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+    color: #002F6C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-sm fixed z-50 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="assets/logo.png" alt="branding pioneers" class="h-10 w-10" />
+                    <span class="text-2xl font-bold text-gray-800">
+                        Branding Pioneers
+                    </span>
+                </a>
+                <!-- Desktop Menu -->
+                <div class="desk-menu sm:flex items-center space-x-8 h-full">
+                    <!-- Services Menu -->
+                    <div class="has-mega-menu group relative h-full flex  items-center">
+                        <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
+                            Services
+                        </button>
+                        <div class="mega-menu top-[60px]">
+                            <div class="container mx-auto px-4">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-search-alt-2 mr-2'></i>
+                                            SEO & Analytics
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Keyword Research
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Technical SEO
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Competitor Analysis
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-line-chart mr-2'></i>
+                                            Advertising
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Google Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Social Media Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Retargeting
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-edit mr-2'></i>
+                                            Content Marketing
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Blog Management
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Video Production
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Content Strategy
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-lg border border-teal-200">
+                                        <h3 class="text-lg font-bold text-teal-600 mb-3">Custom Solutions</h3>
+                                        <p class="text-sm text-gray-600 mb-4">Need a tailored marketing solution? Let's
+                                            create your perfect strategy.</p>
+                                        <button
+                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                                            Schedule Consultation
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Menu Items -->
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Case
+                        Studies</a>
+                    <a href="/teams.html" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Our
+                        Team</a>
+                    <a href="/about-us.html"
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">About</a>
+
+                    <!-- CTA Button -->
+                    <button
+                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all ">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600">
+                    <i class='bx bx-menu text-2xl'></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden  hidden absolute w-full bg-white shadow-md">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Services</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Case Studies</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Resources</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">About</a>
+                <button class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Resources for Your Industry</h1>
+            <p>
+                Good advice can be hard to find. Fortunately, we've compiled an enormous collection of resources 
+                on marketing written by experts with years of experience. Whether you're a heavy equipment manufacturer 
+                curious about email marketing or a fashion retailer trying SEO for the first time – or somewhere in between 
+                – we have advice, tips, and ideas just for you.
+            </p>
+        </div>
+
+        <!-- Slider for brand logos -->
+        <div class="brand-slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/bestplacestowork-bptw-2024-reverse.webp" alt="Brand 1"></div>
+                    <div class="swiper-slide"><img src="./assets/meta-certified-reverse-1.webp" alt="Brand 2"></div>
+                    <div class="swiper-slide"><img src="./assets/bestplacestowork-bptw-2024-reverse.webp" alt="Brand 3"></div>
+                    <div class="swiper-slide"><img src="./assets/meta-certified-reverse-1.webp" alt="Brand 4"></div>
+                    <div class="swiper-slide"><img src="./assets/bestplacestowork-bptw-2024-reverse.webp" alt="Brand 5"></div>
+                    <div class="swiper-slide"><img src="./assets/meta-certified-reverse-1.webp" alt="Brand 1"></div>
+                    <div class="swiper-slide"><img src="./assets/bestplacestowork-bptw-2024-reverse.webp" alt="Brand 2"></div>
+                    <div class="swiper-slide"><img src="./assets/meta-certified-reverse-1.webp" alt="Brand 3"></div>
+                    <div class="swiper-slide"><img src="./assets/bestplacestowork-bptw-2024-reverse.webp" alt="Brand 4"></div>
+                    <div class="swiper-slide"><img src="./assets/meta-certified-reverse-1.webp" alt="Brand 5"></div>
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="cards-container">
+        <div class="card">
+            <h2>Automotive & Transportation</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg" alt="Automotive">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Dealers & Distributors</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Education">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Finance</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg" alt="Automotive">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Food & Beverage</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Franchieses</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Education">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Heavy Equipment</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg" alt="Automotive">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Home Repair</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Industrial</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Insurance</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg" alt="Automotive">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Legal</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+
+        <div class="card">
+            <h2>Local Services</h2>
+            <div class="card-image">
+                <img src="/assets/auto-parts-retailers.jpeg"" alt="Dealers">
+            </div>
+            <a href="#" class="card-link">View Resources →</a>
+        </div>
+      
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 }
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>

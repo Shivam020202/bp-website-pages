@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6F9F6;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    font-size: 14px;
+    color: #2D9CDB;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2D9CDB;
+}
+
+/* Left Content */
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 49px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.second-section{
+    background-color: white;   
+}
+
+.body-content{   
+    margin-top: 20px;
+    padding-top: 30px;  
+}
+
+.body-content p {    
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.body-content h1 {    
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.body-content img {          
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/* Insights Box */
+.insight-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width:460px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    height: 50px;
+    width: 365px;
+    font-size: 25px;
+    align-content: center;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Right Side Image */
+.hero-image {
+    position: relative;
+    max-width: 45%;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-container{
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 25%;
+    width:700px;
+    height:700px;
+    background-color: #207DE9;
+    
+}
+.card-container p{
+    color:white ;
+}
+.card-container h2{
+    color:white ;
+    margin-left:auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    } */
+
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .scroll-top {
+        display: none;
+    }
+}
+
+    </style>
+
+     <style>  
+
+        .testimonial-card-2 {
+            max-width: 600px;
+            background: #1E90FF;
+            border-radius: 16px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-left: 25%;  
+            margin-top: 40px;         
+        }
+
+        .card-title-2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: white;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 32px;
+            margin-bottom: 24px;
+            letter-spacing: 4px;
+        }
+
+        .testimonial-text-2 {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            position: relative;
+            color: white;
+        }
+
+        .client-type {
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+        /* Decorative elements */
+        .decoration {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            pointer-events: none;
+        }
+
+        .decoration::before,
+        .decoration::after {
+            content: '';
+            position: absolute;
+            background: rgba(135, 206, 235, 0.3);
+            border-radius: 50%;
+        }
+
+        .decoration::before {
+            width: 60px;
+            height: 60px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .decoration::after {
+            width: 40px;
+            height: 40px;
+            bottom: 70px;
+            left: 50px;
+        }
+
+        /* Curved lines decoration */
+        .curved-lines {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .curved-lines::before,
+        .curved-lines::after {
+            content: '';
+            position: absolute;
+            border: 3px solid rgba(135, 206, 235, 0.3);
+            border-radius: 100px;
+            width: 100px;
+            height: 200px;
+        }
+
+        .curved-lines::before {
+            top: -100px;
+            right: -50px;
+        }
+
+        .curved-lines::after {
+            top: -120px;
+            right: -20px;
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+
+            .card-title {
+                font-size: 24px;
+            }
+
+            .testimonial-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">                      
+            <h1>Successful Digital Marketing<br> For Auto Manufacturing Companies</h1>
+            <p>Learn how to get better results from digital marketing for auto manufacturers with this compilation of the most effective strategies for businesses like yours.</p>
+            
+            <div class="insight-box">
+                <span class="icon">⭐</span>
+                <h3><strong>INSIGHTS FROM 46,500+ HOURS OF <br> AUTOMOTIVE MARKETING EXPERIENCE</strong></h3>
+            </div>
+
+            <a href="#" class="cta-button">View Marketing Services →</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-container">                                                      
+                <img src="./assets/auto-parts-retailers.jpeg" alt="Automotive Industry">
+                <div class="play-button">
+                    <span>▶</span>                  
+               </div>               
+            </div>
+        </div>                   
+    </section>
+
+    <section class="second-section">
+        <div class="body-content">
+            <p>As an auto manufacturing company, you have a lot of competition. In order to succeed, you need to stay ahead of the pack – and one of the best ways to do so is with digital marketing.</p>
+            
+            <p>With more than 253 million cars and trucks on U.S. roads, it’s more important than ever that your car brand be at the top-of-mind to customers – so that your vehicles are the majority of the ones on the road. When consumers are ready to purchase a new vehicle, they’ll likely purchase from a brand that has a better advertising and marketing strategy – simply because they see and hear about it more often</p>
+
+            <p>There are several digital marketing strategies that you can use to improve your brand awareness, ensure that your auto manufacturer is a household name, and that you outsell your competition.</p>
+
+            <p>On this page, we’ll talk about a few of the best digital marketing techniques for auto manufacturing companies, and how you can get started. If you’d like to speak with one of our digital marketing experts directly, you can reach us at 888-601-5359.</p>
+
+            <p>But first – let’s talk about what we mean by the term “digital marketing.”</p>          
+        </div>
+        <div class="body-content" >
+            <h1>What is digital marketing for auto manufacturers?</h1>
+            <p>Digital marketing is an umbrella term that covers many techniques – but in short, it’s any strategy that helps a business reach new leads or customers online.</p>
+
+            <p>An effective digital marketing strategy includes SEO, PPC, social media marketing, and web design – all of which we’ll talk about on this page.</p>
+
+            <p>Digital marketing as a whole is effective for many reasons, but there’s one reason that particularly stands out – and it’s all about the targeted approach.</p>
+
+            <img loading="lazy" class="aligncenter wp-image-32472 size-full" src="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png" alt="industries auto manufacturing  01" width="864" height="250" srcset="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png 864w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-300x87.png 300w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-768x222.png 768w" sizes="(max-width: 864px) 100vw, 864px">
+
+            <p>In general, there are two kinds of marketing, outbound and inbound.</p>
+
+            <p>Outbound marketing relies on advertising to a huge audience and hoping that at least some of them will be interested in what you have to offer. This includes traditional channels like billboards, direct mail, and TV commercials.</p>
+
+            <p>All of these techniques can simply be ignored if the customer isn’t interested – and many won’t be.</p>
+
+            <img loading="lazy" class="aligncenter wp-image-32472 size-full" src="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png" alt="industries auto manufacturing  01" width="864" height="250" srcset="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png 864w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-300x87.png 300w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-768x222.png 768w" sizes="(max-width: 864px) 100vw, 864px">
+
+            <p>Outbound marketing can be successful if you want to reach a wide audience, but if you want to get better results for your investment, inbound marketing is the answer.</p>
+
+            <p>Inbound marketing involves strategies that help your audience find you where they’re already looking – they make your auto manufacturing company easy to find, and allow customers to come to you.</p>
+
+            <p>These strategies market products based on what they know about potential customers and advertise directly to the audience that is most likely to become satisfied, paying customers.</p>
+        </div>
+
+
+            <div class="testimonial-card-2">
+                <h1 class="card-title-2">Hear What It's Like to Work With WebFX!</h1>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text-2">
+                    "I've had multiple marketing companies in the past 4 years. All didn't last longer than 6-12 months. They were all filling my head with the dream and always failed to deliver results for a reasonable price. I can safely say Web FX is what I have been searching for all this time. Reasonable price, but more importantly, the results are real, my target audience has been met, and our lead generation is fantastic and high quality. We are booked two weeks out during our slowest months of the year! The communication their team gives you along the whole way is incredible. Only 2-3 months in with them and I'm beyond satisfied."
+                </p>
+                <div class="client-type">AUTOMOTIVE MANUFACTURER</div>
+                <div class="decoration"></div>
+                <div class="curved-lines"></div>
+            </div>
+
+            <div class="body-content" >
+                <h1>Digital marketing strategies for your auto manufacturing companies</h1>
+                <p>Though there are many digital marketing techniques available, these four work especially well with the auto manufacturing industry.</p>
+
+                <h1>Search engine optimization (SEO)</h1>
+    
+                <p>Search engine optimization, or SEO, is the practice of making your website easily readable to Google, and beneficial for your readers. Making your website easy for Google to understand makes it easier for customers to find you online.</p>
+    
+                <p>When a user searches for something on Google, it returns results based on what their algorithm has determined to be the most relevant and beneficial pages for the information they want.</p>
+
+                <p>With SEO, you can improve your rankings in results for keywords and phrases related to your business, so that more searchers will see and visit your website.</p>
+
+                <p>The higher your pages rank in search results, the better. In fact, 33% of users will click the first result, and less than 10% of users will even advance to the second page of results. This explains why SEO is a crucial part of your marketing strategy.</p>
+    
+                <img loading="lazy" class="aligncenter wp-image-32472 size-full" src="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png" alt="industries auto manufacturing  01" width="864" height="250" srcset="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png 864w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-300x87.png 300w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-768x222.png 768w" sizes="(max-width: 864px) 100vw, 864px">
+    
+                <p>However, achieving the rankings you want involves several steps, and an ongoing SEO strategy.</p>
+    
+                <p>As you work through these steps and create your strategy, you should strive to create the best site experience possible for your target audience.</p>
+    
+                <p>For example, if you are a Jeep manufacturer, and after some keyword research you find that a high volume of users are asking what kind of Jeep is best for off-roading, you should create a page dedicated to answering that question.</p>
+
+                <p>Or if you find that there is a high search volume for the keyword “bike rack for [your car brand],” you could create a page about where to find those bike racks, and why they can be an asset to your vehicle.</p>
+
+                <h1>Pay-per-click advertising (PPC)</h1>
+    
+                <p>PPC is a kind of ad platform, and is also known as pay-per-click advertising.</p>
+    
+                <p>You can place PPC ads in search engines like Google and Bing.</p>
+
+                <p>The ads work on a bidding system – so you choose the keywords you want to target with your ads, and then choose how much you are willing to pay every time the ad is clicked. If your bid is among the highest for a given keyword, your ad will show up when a user searches it.</p>
+
+                <p>PPC is extremely budget-friendly, too, because you only pay when the ad is clicked – not for the ad space alone.</p>
+    
+                <h1>Social media marketing</h1>
+    
+                <p>Social media marketing is a valuable strategy for companies in all industries today. With a combined total of billions of users every day, social media platforms like Facebook, Instagram, and Twitter are great places to reach your target audience.</p>
+    
+                <p>Social media is primarily used for improving brand awareness, and you can share industry news and share your own website’s content, in order to spark conversation with your followers.</p>
+
+                <p>You should include photos with as many of your posts as possible, since visual content stands out much more in users’ feeds. Social media is also a great opportunity to share videos, like how your cars are made, or how they perform on the road.</p>
+               
+                <img loading="lazy" class="aligncenter wp-image-32472 size-full" src="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png" alt="industries auto manufacturing  01" width="864" height="250" srcset="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png 864w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-300x87.png 300w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-768x222.png 768w" sizes="(max-width: 864px) 100vw, 864px">
+
+                <h1>Web design</h1>
+    
+                <p>Many companies don’t necessarily think of web design as part of their marketing strategy, but it’s an important part of establishing your brand online and showing your target audience who you are.</p>
+    
+                <p>Your website is often the first impression you make on potential customers, so if it’s unorganized, difficult to navigate, or poorly designed, your target audience could develop a negative opinion of your brand.</p>
+
+                <p>This means that your website should be an accurate representation of your company. For example, if you’re dedicated to creating trucks that make it through the toughest conditions, your website could utilize darker, more industrial colors, and use graphics that give a rugged feel.</p>
+               
+                <img loading="lazy" class="aligncenter wp-image-32472 size-full" src="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png" alt="industries auto manufacturing  01" width="864" height="250" srcset="https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01.png 864w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-300x87.png 300w, https://www.webfx.com/wp-content/uploads/2021/10/industries-auto-manufacturing__01-768x222.png 768w" sizes="(max-width: 864px) 100vw, 864px">
+    
+                <p>Just like Google wants to serve users the best possible information for their users, they also want to make sure that those results deliver a positive user experience – another reason why web design is so important.</p>
+    
+                <p>A positive user experience allows users to find what they are looking for easily, enjoy the overall feel of the website, and be informed while doing so.</p>
+    
+                <p>This means that your site should have a straightforward navigation bar, fast load times, and interesting graphics for increased engagement.</p>
+
+                <h1>Are you ready to reach more customers with a digital marketing campaign?</h1>
+    
+                <p>Auto manufacturing companies all over the world use digital marketing to reach more customers. With the right strategy, you can increase your online visibility, attract more qualified leads, and generate more revenue.</p>
+    
+                <p>If you’re ready to experience these results and partner with a manufacturing marketing agency, WebFX can help. We have an experienced team of digital marketing specialists that can create a results-driven campaign tailored to your needs and goals.
+                </p>
+            </div>
+
+       
+    </section>
+
+</body>
+</html>
