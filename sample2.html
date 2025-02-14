@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Hero Section</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .desk-menu {
+                /* background-color: #000; */
+                display: none !important;
+            }
+        }
+
+        .mega-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            z-index: 50;
+            padding: 2rem 0;
+            margin-top: 1px;
+        }
+
+        .has-mega-menu:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+            transition: width 0.3s ease;
+        }
+
+        .has-mega-menu:hover .nav-highlight::after {
+            width: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            .mega-menu {
+                display: none !important;
+            }
+        }
+    </style>
     <style>
         /* General Styles */
 body {
@@ -82,6 +152,7 @@ body {
     margin-bottom: 20px;
     margin-left: 100px;
     margin-right: 100px;
+    width: auto;
 }
 
 
@@ -110,7 +181,7 @@ body {
     transition: 0.3s;
     height: 50px;
     width: 365px;
-    font-size: 25px;
+    font-size: 20px;
     align-content: center;
 }
 
@@ -332,8 +403,279 @@ body {
             }
         }
     </style>
+
+<style>        
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+       
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+    }
+
+    .header p {
+        font-size: 18px;
+        color: #666;
+    }
+
+    .cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+
+    .case-card {
+        background: #002B5C;
+        border-radius: 16px;
+        padding: 32px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .case-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .case-card:last-child {
+        background: #1E90FF;
+    }
+
+    .case-card h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .stat {
+        font-size: 48px;
+        font-weight: bold;
+        color: #5CE1E6;
+        margin-bottom: 8px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+        margin-bottom: 24px;
+        line-height: 1.4;
+    }
+
+    .cta-link {
+        color: #5CE1E6;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.2s ease;
+    }
+
+    .cta-link:hover {
+        color: white;
+    }
+
+    .cta-link::after {
+        content: "→";
+        margin-left: 8px;
+        transition: transform 0.2s ease;
+    }
+
+    .cta-link:hover::after {
+        transform: translateX(4px);
+    }
+
+    .dots-decoration {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+        background-size: 8px 8px;
+    }
+
+    .pricing-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 12px 24px;
+        background: #1E90FF;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+
+    .pricing-button:hover {
+        background: #1976D2;
+    }
+
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 28px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        .case-card {
+            padding: 24px;
+        }
+
+        .stat {
+            font-size: 36px;
+        }
+    }
+</style>
 </head>
 <body>
+    <nav class="bg-white shadow-sm fixed z-50 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="assets/logo.png" alt="branding pioneers" class="h-10 w-10" />
+                    <span class="text-2xl font-bold text-gray-800">
+                        Branding Pioneers
+                    </span>
+                </a>
+                <!-- Desktop Menu -->
+                <div class="desk-menu sm:flex items-center space-x-8 h-full">
+                    <!-- Services Menu -->
+                    <div class="has-mega-menu group relative h-full flex  items-center">
+                        <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
+                            Services
+                        </button>
+                        <div class="mega-menu top-[60px]">
+                            <div class="container mx-auto px-4">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-search-alt-2 mr-2'></i>
+                                            SEO & Analytics
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Keyword Research
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Technical SEO
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Competitor Analysis
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-line-chart mr-2'></i>
+                                            Advertising
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Google Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Social Media Ads
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Retargeting
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pr-4">
+                                        <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
+                                            <i class='bx bx-edit mr-2'></i>
+                                            Content Marketing
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Blog Management
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Video Production
+                                                </a></li>
+                                            <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
+                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    Content Strategy
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-lg border border-teal-200">
+                                        <h3 class="text-lg font-bold text-teal-600 mb-3">Custom Solutions</h3>
+                                        <p class="text-sm text-gray-600 mb-4">Need a tailored marketing solution? Let's
+                                            create your perfect strategy.</p>
+                                        <button
+                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                                            Schedule Consultation
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Menu Items -->
+                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Case
+                        Studies</a>
+                    <a href="/teams.html" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Our
+                        Team</a>
+                    <a href="/about-us.html"
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">About</a>
+
+                    <!-- CTA Button -->
+                    <button
+                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all ">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600">
+                    <i class='bx bx-menu text-2xl'></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden  hidden absolute w-full bg-white shadow-md">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Services</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Case Studies</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Resources</a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">About</a>
+                <button class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="h-16"></div>
 
     <section class="hero">
         <div class="hero-content">                      
@@ -473,8 +815,57 @@ body {
     
                 <p>If you’re ready to experience these results and partner with a manufacturing marketing agency, WebFX can help. We have an experienced team of digital marketing specialists that can create a results-driven campaign tailored to your needs and goals.
                 </p>
-            </div>
 
+                <div class="container">
+                    <header class="header">
+                        <h1>Explore our automotive case studies</h1>
+                        <p>Read our case studies for a more in-depth look at our results.</p>
+                    </header>
+            
+                    <div class="cases-grid">
+                        <!-- StockWise Auto Card -->
+                        <div class="case-card">
+                            <div class="dots-decoration"></div>
+                            <h2>StockWise Auto</h2>
+                            <div class="stat">48%</div>
+                            <div class="stat-label">Increase in transactions YoY</div>
+                            <a href="#" class="cta-link">Read Full Case Study</a>
+                        </div>
+            
+                        <!-- Stockwell Card -->
+                        <div class="case-card">
+                            <div class="dots-decoration"></div>
+                            <h2>Stockwell</h2>
+                            <div class="stat">885%</div>
+                            <div class="stat-label">Increase in traffic</div>
+                            <a href="#" class="cta-link">Read Full Case Study</a>
+                        </div>
+            
+                        <!-- Northside Towing Card -->
+                        <div class="case-card">
+                            <div class="dots-decoration"></div>
+                            <h2>Northside Towing</h2>
+                            <div class="stat">435%</div>
+                            <div class="stat-label">Increase in ad spend ROI</div>
+                            <a href="#" class="cta-link">Read Full Case Study</a>
+                        </div>
+            
+                        <!-- Your Business Card -->
+                        <div class="case-card">
+                            <div class="dots-decoration"></div>
+                            <h2>Your Business</h2>
+                            <div class="stat">IS NEXT</div>
+                            <div class="stat-label">Get a free proposal today!</div>
+                            <a href="#" class="cta-link">Request a Proposal</a>
+                        </div>
+                    </div>
+            
+                    <a href="#" class="pricing-button">View pricing</a>
+                </div>
+            </div>      
+    </section>
+
+    <section class="third-section">
        
     </section>
 
