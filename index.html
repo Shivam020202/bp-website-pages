@@ -12,6 +12,8 @@
         integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script>
         tailwind.config = {
@@ -1956,6 +1958,12 @@
     </footer>
 
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
@@ -2034,6 +2042,55 @@
                 portfolioTabs[0].click();
             }
         });
+    </script>
+    <script>
+        // Initialize Swipers
+        const caseStudySwiper = new Swiper('.caseStudySwiper', {
+            loop: true,
+            autoplay: { delay: 5000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 1 } }
+        });
+
+        const testimonialSwiper = new Swiper('.testimonialSwiper', {
+            loop: true,
+            autoplay: { delay: 7000 },
+            pagination: { el: '.swiper-pagination', clickable: true }
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate stats counters
+        document.querySelectorAll('[data-counter]').forEach(el => {
+            gsap.to(el, {
+                scrollTrigger: el,
+                innerText: el.dataset.counter,
+                duration: 2,
+                snap: { innerText: 1 },
+                ease: "power4.out"
+            });
+        });
+
+        // Portfolio item animations
+        gsap.utils.toArray('.portfolio-item').forEach(item => {
+            gsap.from(item, {
+                scrollTrigger: item,
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power4.out"
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenu').addEventListener('click', () => {
+            document.querySelector('.md\\:flex').classList.toggle('hidden');
+        });
+
+        // Hero text animation
+        gsap.from('h1', { opacity: 0, y: 50, duration: 1, ease: "power4.out" });
+        gsap.from('p', { opacity: 0, y: 30, duration: 1, delay: 0.3, ease: "power4.out" });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
     <script>
