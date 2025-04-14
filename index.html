@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home Page</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-pHj1...YOUR_INTEGRITY_HASH_HERE..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,6 +76,28 @@
             .mega-menu {
                 display: none !important;
             }
+        }
+
+        /* Custom pagination styles */
+        .pagination-custom {
+            --swiper-pagination-color: white;
+            --swiper-pagination-bullet-inactive-color: #4b5563;
+            /* gray-600 */
+            --swiper-pagination-bullet-inactive-opacity: 0.8;
+            --swiper-pagination-bullet-size: 10px;
+            --swiper-pagination-bullet-horizontal-gap: 6px;
+        }
+
+        .pagination-custom .swiper-pagination-bullet {
+            background: #4b5563;
+            /* Gray inactive bullets */
+            opacity: 0.5;
+        }
+
+        .pagination-custom .swiper-pagination-bullet-active {
+            background: white;
+            /* White active bullet */
+            opacity: 1;
         }
     </style>
     <style>
@@ -276,11 +299,18 @@
             }
         }
     </style>
+    <style>
+        /* Custom teal glow effect on hover */
+        .hover\:shadow-\[0_0_15px_rgba\(45\,212\,191\,0\.5\)\]:hover {
+            box-shadow: 0 0 15px rgba(45, 212, 191, 0.5);
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
+    <!-- Bootstrap Icons CDN -->
     <nav class="bg-white shadow-sm fixed z-50 w-full">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16">
@@ -294,7 +324,7 @@
                 <!-- Desktop Menu -->
                 <div class="desk-menu sm:flex items-center space-x-8 h-full">
                     <!-- Services Menu -->
-                    <div class="has-mega-menu group relative h-full flex  items-center">
+                    <div class="has-mega-menu group relative h-full flex items-center">
                         <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
                             Services
                         </button>
@@ -303,20 +333,20 @@
                                 <div class="grid grid-cols-4 gap-8">
                                     <div class="pr-4">
                                         <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
-                                            <i class='bx bx-search-alt-2 mr-2'></i>
+                                            <i class="bi bi-search me-2"></i>
                                             SEO & Analytics
                                         </h4>
                                         <ul class="space-y-3">
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Keyword Research
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Technical SEO
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Competitor Analysis
                                                 </a></li>
                                         </ul>
@@ -324,20 +354,20 @@
 
                                     <div class="pr-4">
                                         <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
-                                            <i class='bx bx-line-chart mr-2'></i>
+                                            <i class="bi bi-graph-up-arrow me-2"></i>
                                             Advertising
                                         </h4>
                                         <ul class="space-y-3">
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Google Ads
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Social Media Ads
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Retargeting
                                                 </a></li>
                                         </ul>
@@ -345,20 +375,20 @@
 
                                     <div class="pr-4">
                                         <h4 class="text-teal-600 font-semibold mb-4 flex items-center">
-                                            <i class='bx bx-edit mr-2'></i>
+                                            <i class="bi bi-pencil-square me-2"></i>
                                             Content Marketing
                                         </h4>
                                         <ul class="space-y-3">
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Blog Management
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Video Production
                                                 </a></li>
                                             <li><a href="#" class="text-gray-600 hover:text-teal-500 flex items-center">
-                                                    <i class='bx bx-chevron-right mr-2'></i>
+                                                    <i class="bi bi-chevron-right me-2"></i>
                                                     Content Strategy
                                                 </a></li>
                                         </ul>
@@ -366,11 +396,15 @@
 
                                     <div
                                         class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-lg border border-teal-200">
-                                        <h3 class="text-lg font-bold text-teal-600 mb-3">Custom Solutions</h3>
+                                        <h3 class="text-lg font-bold text-teal-600 mb-3 flex items-center">
+                                            <i class="bi bi-stars me-2"></i>
+                                            Custom Solutions
+                                        </h3>
                                         <p class="text-sm text-gray-600 mb-4">Need a tailored marketing solution? Let's
                                             create your perfect strategy.</p>
                                         <button
-                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                                            class="w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors flex items-center justify-center">
+                                            <i class="bi bi-calendar-check me-2"></i>
                                             Schedule Consultation
                                         </button>
                                     </div>
@@ -380,41 +414,66 @@
                     </div>
 
                     <!-- Other Menu Items -->
-                    <a href="#" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Case
-                        Studies</a>
-                    <a href="/teams.html" class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">Our
-                        Team</a>
+                    <a href="#"
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 flex items-center">
+                        <i class="bi bi-journal-richtext me-1"></i>
+                        Case Studies
+                    </a>
+                    <a href="/teams.html"
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 flex items-center">
+                        <i class="bi bi-people me-1"></i>
+                        Our Team
+                    </a>
                     <a href="/about-us.html"
-                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600">About</a>
+                        class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 flex items-center">
+                        <i class="bi bi-building me-1"></i>
+                        About
+                    </a>
 
                     <!-- CTA Button -->
                     <button
-                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all ">
+                        class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all flex items-center">
+                        <i class="bi bi-rocket-takeoff me-2"></i>
                         Get Started
                     </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600">
-                    <i class='bx bx-menu text-2xl'></i>
+                    <i class="bi bi-list text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden  hidden absolute w-full bg-white shadow-md">
+        <div id="mobile-menu" class="lg:hidden hidden absolute w-full bg-white shadow-md">
             <div class="px-4 py-3 space-y-2">
-                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Services</a>
-                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Case Studies</a>
-                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">Resources</a>
-                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50">About</a>
-                <button class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2">
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50 flex items-center">
+                    <i class="bi bi-grid me-2"></i>
+                    Services
+                </a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50 flex items-center">
+                    <i class="bi bi-journal-richtext me-2"></i>
+                    Case Studies
+                </a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50 flex items-center">
+                    <i class="bi bi-file-earmark-text me-2"></i>
+                    Resources
+                </a>
+                <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-teal-50 flex items-center">
+                    <i class="bi bi-building me-2"></i>
+                    About
+                </a>
+                <button
+                    class="bg-teal-600 text-white w-full px-6 py-2 rounded-md mt-2 flex items-center justify-center">
+                    <i class="bi bi-rocket-takeoff me-2"></i>
                     Get Started
                 </button>
             </div>
         </div>
     </nav>
     <div class="h-16"></div>
+
 
     <!-- Hero Section -->
     <section class="relative min-h-[85vh] bg-gradient-to-b from-gray-50 to-white overflow-hidden">
@@ -543,7 +602,7 @@
     </section>
 
     <!-- Why choose us -->
-    <section class="bg-gradient-to-b from-white via-teal-50/30 to-white py-8">
+    <section class="bg-gradient-to-b from-white via-teal-50/30 to-white py-8 pb-20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="container mx-auto">
                 <div class="mb-8 text-center">
@@ -679,170 +738,198 @@
     </section>
 
     <!-- Services Section -->
-    <div class="container max-w-7xl mx-auto px-4 py-16">
+    <section class="bg-gradient-to-br from-gray-800 via-teal-800 to-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col items-center w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6 text-teal-600">
+                    <path fill-rule="evenodd"
+                        d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                        clip-rule="evenodd"></path>
+                </svg>
 
+                <h2 class="my-8 text-2xl font-bold text-gray-100 md:text-4xl mb-12">Explore our offerings
+                </h2>
+                <!-- <p class="text-gray-700">We have built many products and some of them are below</p> -->
+            </div>
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-3 gap-4 md:gap-5">
+                <!-- Featured number - SEO Excellence -->
+                <div
+                    class="col-span-1 row-span-1 bg-zinc-900 rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <h2 class="text-teal-400 text-6xl font-bold mb-2">140+</h2>
+                    <p class="text-zinc-400 text-xl leading-tight">
+                        Successful SEO <br />campaigns
+                    </p>
+                </div>
 
-        <div class="flex flex-col items-center w-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="w-6 h-6 text-teal-600">
-                <path fill-rule="evenodd"
-                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
-                    clip-rule="evenodd"></path>
-            </svg>
+                <!-- Services Icons -->
+                <div
+                    class="col-span-1 row-span-1 bg-zinc-900 rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <div class="p-3 bg-black rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <div class="p-3 bg-zinc-800 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-200" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                            </svg>
+                        </div>
+                        <div class="p-3 bg-zinc-700 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-300" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                        </div>
+                        <div class="p-3 bg-teal-400/20 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-center mt-6">
+                        6 digital <br />marketing services
+                    </p>
+                </div>
 
-            <h2 class="my-8 text-2xl font-bold text-gray-900 md:text-4xl">Our Digital Marketing Services</h2>
-            <!-- <p class="text-gray-700">We have built many products and some of them are below</p> -->
+                <!-- Traffic increase number -->
+                <div
+                    class="col-span-1 row-span-1 bg-zinc-900 rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <h2 class="text-teal-400 text-6xl font-bold">85%</h2>
+                    <p class="text-zinc-400 text-xl">
+                        Traffic <br />increase
+                    </p>
+                </div>
+
+                <!-- Large reviews section -->
+                <div
+                    class="col-span-3 bg-zinc-900 rounded-3xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <div class="flex mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 text-teal-400 mx-0.5">
+                            <path fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 text-teal-400 mx-0.5">
+                            <path fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 text-teal-400 mx-0.5">
+                            <path fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 text-teal-400 mx-0.5">
+                            <path fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-5 h-5 text-teal-400 mx-0.5">
+                            <path fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-4xl font-bold my-2">Best in the Business !</h2>
+                    <p class="text-zinc-400 text-lg">400+ satisfied clients</p>
+                </div>
+
+                <!-- Image Grid Items -->
+                <div
+                    class="col-span-1 bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <img src="https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063172.jpg?t=st=1744634159~exp=1744637759~hmac=54bcd1b847e7194b111cae8be029be5eac8b07e2f95a2bfbd2415049f401c988&w=1480"
+                        alt="SEO Services" class="w-full h-full object-cover" />
+                </div>
+
+                <div
+                    class="col-span-1 bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <img src="https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?t=st=1744634087~exp=1744637687~hmac=f4d35ea1d6b9314c01a2fc2e1198d3aa46b8ed381d19aaa06ccc8e7eb80ef865&w=1800"
+                        alt="Analytics Dashboard" class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Video Marketing - Teal Version -->
+                <div
+                    class="col-span-1 bg-teal-800 rounded-3xl p-6 flex flex-col justify-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <div class="p-3 bg-black/20 inline-block rounded-xl mb-4 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-white text-xl font-bold">Video Marketing</h3>
+                    <p class="text-white/80 mt-2">Engage your audience with compelling video content</p>
+                </div>
+
+                <!-- Wide Image -->
+                <div
+                    class="col-span-2 bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <img src="https://img.freepik.com/premium-photo/google-icon-screen-smartphone-mobile-phone-3d-render_41204-21728.jpg?w=1800"
+                        alt="Digital Marketing Services" class="w-full h-64 object-cover" />
+                </div>
+
+                <!-- Additional Service Boxes -->
+                <!-- Email Marketing -->
+                <div
+                    class="col-span-1 bg-teal-900/50 rounded-3xl p-6 flex flex-col justify-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <div class="p-3 bg-black/20 inline-block rounded-xl mb-4 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-white text-xl font-bold">Email Marketing</h3>
+                    <p class="text-white/80 mt-2">Drive conversions with personalized campaigns</p>
+                </div>
+
+                <!-- Social Media -->
+                <div
+                    class="col-span-1 bg-zinc-900 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <img src="https://img.freepik.com/premium-photo/illustration-abstract-link-network-app-social-media_1148129-3137.jpg?w=2000"
+                        alt="Social Media Marketing" class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Content Marketing -->
+                <div
+                    class="col-span-1 bg-teal-700/40 rounded-3xl p-6 flex flex-col justify-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+                    <div class="p-3 bg-black/20 inline-block rounded-xl mb-4 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-200" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-white text-xl font-bold">Content Marketing</h3>
+                    <p class="text-white/80 mt-2">Build authority with valuable content</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Service Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- SEO Services Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">On-Page SEO</li>
-                    <li class="sub-category text-gray-600">Technical SEO</li>
-                    <li class="sub-category text-gray-600">Local SEO</li>
-                    <li class="sub-category text-gray-600">Content Optimization</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
 
-            <!-- Social Media Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Social Media Marketing</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">Content Creation</li>
-                    <li class="sub-category text-gray-600">Community Management</li>
-                    <li class="sub-category text-gray-600">Social Media Ads</li>
-                    <li class="sub-category text-gray-600">Influencer Marketing</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Content Marketing Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Content Marketing</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">Blog Writing</li>
-                    <li class="sub-category text-gray-600">Copywriting</li>
-                    <li class="sub-category text-gray-600">Email Marketing</li>
-                    <li class="sub-category text-gray-600">Video Content</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- PPC Advertising Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">PPC Advertising</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">Google Ads</li>
-                    <li class="sub-category text-gray-600">Facebook Ads</li>
-                    <li class="sub-category text-gray-600">Display Advertising</li>
-                    <li class="sub-category text-gray-600">Remarketing</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Web Analytics Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Web Analytics</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">Data Analysis</li>
-                    <li class="sub-category text-gray-600">Performance Tracking</li>
-                    <li class="sub-category text-gray-600">Conversion Optimization</li>
-                    <li class="sub-category text-gray-600">Custom Reporting</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Email Marketing Card -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-8">
-                <div class="icon-wrapper w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Marketing</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="sub-category text-gray-600">Campaign Strategy</li>
-                    <li class="sub-category text-gray-600">Newsletter Design</li>
-                    <li class="sub-category text-gray-600">Automation Setup</li>
-                    <li class="sub-category text-gray-600">List Management</li>
-                </ul>
-                <button class="view-all-btn flex items-center text-teal-600 font-medium">
-                    <span class="transition-transform duration-300">View All Services</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Portfolio Section -->
-    <div id="portfolio" class="p-4 min-h-screen relative bg-gray-50">
+    <div id="portfolio" class="p-4 min-h-screen relative ">
         <!-- Background gradients -->
-        <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20">
+        <!-- <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20">
             <div class="blur-[46px] h-56 bg-gradient-to-br to-purple-400 from-blue-700"></div>
             <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-teal-600"></div>
-        </div>
+        </div> -->
 
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div class="mt-12 text-gray-900">
@@ -1114,7 +1201,7 @@
     </div>
 
     <!-- Case studies -->
-    <section class="max-w-7xl mx-auto px-6">
+    <section class="max-w-7xl mx-auto px-6 pb-20">
         <!-- Header -->
         <div class="mb-8 pt-12 w-full text-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -1277,117 +1364,162 @@
     </section>
 
     <!-- Testimonials Section -->
-    <div class="max-w-7xl mx-auto px-4 pb-16 pt-10">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="w-6 h-6 text-teal-600 mx-auto mb-6">
-                <path fill-rule="evenodd"
-                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
-                    clip-rule="evenodd"></path>
-            </svg>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What Our Clients Say
-            </h2>
-            <!-- <div class="w-20 h-1 bg-teal-600 mx-auto mb-4"></div> -->
-            <p class="text-gray-600">
-                Hear success stories directly from our clients who have transformed their businesses with our solutions.
-            </p>
-        </div>
-
-        <!-- Video Slider -->
-        <div class="swiper video-testimonials">
-            <div class="swiper-wrapper pb-12">
-                <!-- Video 1 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="dQw4w9WgXcQ"
-                                style="background-image: url('https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Sarah Johnson</h3>
-                            <p class="text-gray-600 text-sm">CEO, TechStart Solutions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="W-rHIsDFrzQ"
-                                style="background-image: url('https://i.ytimg.com/vi/W-rHIsDFrzQ/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Emma Davis</h3>
-                            <p class="text-gray-600 text-sm">Marketing Director, InnovateCo</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more slides as needed -->
+    <div class=" px-4 pb-16 pt-10 bg-gradient-to-br from-gray-900 via-teal-800 to-gray-800">
+        <div class="max-w-7xl mx-auto container">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-10 h-10 text-teal-300 mx-auto mb-6">
+                    <path fill-rule="evenodd"
+                        d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    What Our Clients Say
+                </h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto mb-6 rounded-full"></div>
+                <p class="text-teal-100">
+                    Hear success stories directly from our clients who have transformed their businesses with our
+                    solutions.
+                </p>
             </div>
 
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- Video Slider -->
+            <div class="swiper video-testimonials">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Video 1 -->
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="dQw4w9WgXcQ"
+                                    style="background-image: url('https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    SJ</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Sarah Johnson</h3>
+                                    <p class="text-teal-200 text-sm">CEO, TechStart Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+                    <!-- Video 2 -->
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="M7lc1UVf-VE"
+                                    style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    MC</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Michael Chen</h3>
+                                    <p class="text-teal-200 text-sm">Founder, Digital Dynamics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="W-rHIsDFrzQ"
+                                    style="background-image: url('https://i.ytimg.com/vi/W-rHIsDFrzQ/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    ED</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Emma Davis</h3>
+                                    <p class="text-teal-200 text-sm">Marketing Director, InnovateCo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="M7lc1UVf-VE"
+                                    style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    MC</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Michael Chen</h3>
+                                    <p class="text-teal-200 text-sm">Founder, Digital Dynamics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="M7lc1UVf-VE"
+                                    style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    MC</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Michael Chen</h3>
+                                    <p class="text-teal-200 text-sm">Founder, Digital Dynamics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide px-4">
+                        <div
+                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            <div class="aspect-video rounded-xl overflow-hidden">
+                                <lite-youtube videoid="M7lc1UVf-VE"
+                                    style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
+                                    class="rounded-xl"></lite-youtube>
+                            </div>
+                            <div class="mt-6 flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg">
+                                    MC</div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Michael Chen</h3>
+                                    <p class="text-teal-200 text-sm">Founder, Digital Dynamics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more slides as needed -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next text-teal-300"></div>
+                <div class="swiper-button-prev text-teal-300"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination "></div>
+            </div>
         </div>
     </div>
 
