@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home Page</title>
+
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
@@ -305,6 +306,19 @@
             box-shadow: 0 0 15px rgba(45, 212, 191, 0.5);
         }
     </style>
+    <style>
+        /* Grid pattern background */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        #modal-video-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -473,7 +487,6 @@
     </nav>
     <div class="h-16"></div>
 
-
     <!-- Hero Section -->
     <section class="relative min-h-[85vh] bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <!-- Grid Pattern Background -->
@@ -619,63 +632,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        /* Grid pattern background */
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
-
-    <script>
-        // Counter animation script
-        document.addEventListener('DOMContentLoaded', function () {
-            const countElements = document.querySelectorAll('.count-up');
-
-            const animateCounter = (element, target, duration = 2000) => {
-                let start = 0;
-                const end = parseInt(target);
-                const range = end - start;
-                const startTime = performance.now();
-
-                const updateCount = (timestamp) => {
-                    const runtime = timestamp - startTime;
-                    const progress = Math.min(runtime / duration, 1);
-                    const currentCount = Math.floor(progress * range);
-
-                    element.innerText = currentCount + (element.dataset.value.includes('%') ? '%' : '+');
-
-                    if (runtime < duration) {
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        element.innerText = target + (element.dataset.value.includes('%') ? '%' : '+');
-                    }
-                };
-
-                requestAnimationFrame(updateCount);
-            };
-
-            // Create an Intersection Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target.getAttribute('data-value');
-                        animateCounter(entry.target, target);
-                        observer.unobserve(entry.target); // Only animate once
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            // Observe all counter elements
-            countElements.forEach(counter => {
-                observer.observe(counter);
-            });
-        });
-    </script>
 
     <!-- Why choose us -->
     <section class="bg-gradient-to-b from-white via-teal-50/30 to-white py-8 pb-20">
@@ -997,8 +953,6 @@
         </div>
     </section>
 
-
-
     <!-- Portfolio Section -->
     <div id="portfolio" class="p-4 min-h-screen relative ">
         <!-- Background gradients -->
@@ -1279,7 +1233,7 @@
     <!-- Case studies -->
     <section class="max-w-7xl mx-auto px-6 pb-20">
         <!-- Header -->
-        <div class="mb-8 pt-12 w-full text-center">
+        <div class="mb-8  w-full text-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 text-teal-600 mx-auto mb-6">
                 <path fill-rule="evenodd"
@@ -1487,7 +1441,7 @@
                     <!-- Video 2 -->
                     <div class="swiper-slide px-4">
                         <div
-                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            class="bg-gray-900  rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
                             <div class="aspect-video rounded-xl overflow-hidden">
                                 <lite-youtube videoid="M7lc1UVf-VE"
                                     style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
@@ -1508,7 +1462,7 @@
                     <!-- Video 3 -->
                     <div class="swiper-slide px-4">
                         <div
-                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            class="bg-gray-900  rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
                             <div class="aspect-video rounded-xl overflow-hidden">
                                 <lite-youtube videoid="W-rHIsDFrzQ"
                                     style="background-image: url('https://i.ytimg.com/vi/W-rHIsDFrzQ/hqdefault.jpg');"
@@ -1528,7 +1482,7 @@
 
                     <div class="swiper-slide px-4">
                         <div
-                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            class="bg-gray-900  rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
                             <div class="aspect-video rounded-xl overflow-hidden">
                                 <lite-youtube videoid="M7lc1UVf-VE"
                                     style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
@@ -1548,7 +1502,7 @@
 
                     <div class="swiper-slide px-4">
                         <div
-                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            class="bg-gray-900  rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
                             <div class="aspect-video rounded-xl overflow-hidden">
                                 <lite-youtube videoid="M7lc1UVf-VE"
                                     style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
@@ -1568,7 +1522,7 @@
 
                     <div class="swiper-slide px-4">
                         <div
-                            class="bg-teal-800 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
+                            class="bg-gray-900  rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300">
                             <div class="aspect-video rounded-xl overflow-hidden">
                                 <lite-youtube videoid="M7lc1UVf-VE"
                                     style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"
@@ -2312,48 +2266,36 @@
             connectedCallback() {
                 this.videoId = this.getAttribute('videoid');
 
-                this.addEventListener('click', () => {
-                    if (!this.isIframeLoaded) {
-                        // Stop autoplay when video is clicked
-                        if (window.swiper) {
-                            window.swiper.autoplay.stop();
-                            // Disable autoplay completely
-                            window.swiper.params.autoplay.enabled = false;
-                        }
-
-                        const iframe = document.createElement('iframe');
-                        iframe.width = '100%';
-                        iframe.height = '100%';
-                        iframe.title = 'YouTube video player';
-                        iframe.frameBorder = '0';
-                        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                        iframe.allowFullscreen = true;
-                        iframe.src = `https://www.youtube-nocookie.com/embed/${this.videoId}?autoplay=1&enablejsapi=1`;
-
-                        // Remove background image and play button
-                        this.style.backgroundImage = '';
-                        const playBtn = this.querySelector('.lty-playbtn');
-                        if (playBtn) {
-                            playBtn.remove();
-                        }
-
-                        this.appendChild(iframe);
-                        this.isIframeLoaded = true;
-
-                        // Listen for video end
-                        iframe.addEventListener('load', () => {
-                            iframe.contentWindow.postMessage(JSON.stringify({
-                                event: 'listening',
-                                id: this.videoId
-                            }), '*');
-                        });
-                    }
-                });
-
                 // Set preview image
                 const playBtn = document.createElement('button');
                 playBtn.className = 'lty-playbtn';
                 this.appendChild(playBtn);
+
+                // Add click handler to the play button
+                playBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.handleVideoClick();
+                });
+
+                // Make entire element clickable
+                this.addEventListener('click', (e) => {
+                    if (e.target !== playBtn) {
+                        this.handleVideoClick();
+                    }
+                });
+            }
+
+            handleVideoClick() {
+                // Stop swiper autoplay when video is clicked
+                if (window.swiper) {
+                    window.swiper.autoplay.stop();
+                    window.swiper.params.autoplay.enabled = false;
+                }
+
+                // Show video in modal instead of embedding directly
+                const videoId = this.getAttribute('videoid');
+                showVideoInModal(videoId);
             }
         }
         customElements.define('lite-youtube', LiteYTEmbed);
@@ -2398,19 +2340,89 @@
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
-            },
-            on: {
-                slideChange: function () {
-                    // Find any active videos and pause them when sliding
-                    const activeVideos = document.querySelectorAll('lite-youtube iframe');
-                    activeVideos.forEach(video => {
-                        const videoParent = video.closest('lite-youtube');
-                        if (videoParent && !videoParent.closest('.swiper-slide-active')) {
-                            video.src = video.src; // This effectively resets/stops the video
-                        }
-                    });
-                }
             }
+        });
+
+        // Create modal element
+        const modal = document.createElement('div');
+        modal.id = 'video-modal';
+        modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 hidden';
+        modal.innerHTML = `
+        <div class="relative w-full max-w-4xl mx-4">
+            <button id="close-modal" class="absolute -top-12 right-0 text-white hover:text-teal-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="aspect-video w-full">
+                <div id="modal-video-container"></div>
+            </div>
+        </div>
+    `;
+        document.body.appendChild(modal);
+
+        // Close modal when clicking the close button
+        document.getElementById('close-modal').addEventListener('click', function () {
+            closeVideoModal();
+        });
+
+        // Close modal when clicking outside the video
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeVideoModal();
+            }
+        });
+
+        function showVideoInModal(videoId) {
+            const container = document.getElementById('modal-video-container');
+
+            // Create YouTube iframe
+            container.innerHTML = `
+            <iframe width="100%" height="100%" 
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                class="rounded-lg">
+            </iframe>
+        `;
+
+            modal.classList.remove('hidden');
+
+            // Listen for video end in modal
+            const iframe = container.querySelector('iframe');
+            iframe.addEventListener('load', () => {
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'listening',
+                    id: videoId
+                }), '*');
+            });
+        }
+
+        function closeVideoModal() {
+            modal.classList.add('hidden');
+            const container = document.getElementById('modal-video-container');
+            container.innerHTML = '';
+
+            // Restart swiper autoplay when modal closes
+            if (window.swiper) {
+                window.swiper.params.autoplay.enabled = true;
+                window.swiper.autoplay.start();
+            }
+        }
+
+        // Handle all video card clicks as fallback
+        document.querySelectorAll('.swiper-slide').forEach(slide => {
+            slide.addEventListener('click', function (e) {
+                // Don't trigger if clicking on navigation or other elements
+                if (e.target.closest('a') || e.target.closest('button')) return;
+
+                const youtubeElement = slide.querySelector('lite-youtube');
+                if (youtubeElement) {
+                    const videoId = youtubeElement.getAttribute('videoid');
+                    showVideoInModal(videoId);
+                }
+            });
         });
     </script>
     <script>
@@ -2469,7 +2481,7 @@
         function showQuoteForm() {
             // Add your quote form logic here
             alert("Let's create something amazing! Redirecting to quote form...");
-        }
+        };
 
         // Pause animation on hover
         const carousel = document.querySelector('.carousel');
@@ -2677,6 +2689,53 @@
                     formContainer.classList.remove('pulse-animation');
                 }, 5000);
             }
+        });
+    </script>
+    <script>
+        // Counter animation script
+        document.addEventListener('DOMContentLoaded', function () {
+            const countElements = document.querySelectorAll('.count-up');
+
+            const animateCounter = (element, target, duration = 2000) => {
+                let start = 0;
+                const end = parseInt(target);
+                const range = end - start;
+                const startTime = performance.now();
+
+                const updateCount = (timestamp) => {
+                    const runtime = timestamp - startTime;
+                    const progress = Math.min(runtime / duration, 1);
+                    const currentCount = Math.floor(progress * range);
+
+                    element.innerText = currentCount + (element.dataset.value.includes('%') ? '%' : '+');
+
+                    if (runtime < duration) {
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        element.innerText = target + (element.dataset.value.includes('%') ? '%' : '+');
+                    }
+                };
+
+                requestAnimationFrame(updateCount);
+            };
+
+            // Create an Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target.getAttribute('data-value');
+                        animateCounter(entry.target, target);
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            // Observe all counter elements
+            countElements.forEach(counter => {
+                observer.observe(counter);
+            });
         });
     </script>
 
