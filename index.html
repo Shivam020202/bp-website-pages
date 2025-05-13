@@ -337,7 +337,7 @@
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class=" lg:!flex items-center space-x-1 xl:space-x-4 h-full">
+                <div class="desk-menu lg:!flex items-center xl:space-x-4 h-full">
                     <!-- Services Menu (with Mega Menu) -->
                     <div class="has-mega-menu relative h-full flex items-center">
                         <button class="nav-highlight relative px-3 py-2 text-gray-600 hover:text-teal-600 font-medium">
@@ -2287,7 +2287,7 @@
                         <div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
                             <img src="assets/logo.png" alt="branding pioneers logo" class="w-full h-full">
                         </div>
-                        <span class="ml-4 text-2xl font-bold text-white">Branding Pioneers</span>
+                        <span class="ml-4 text-2xl font-bold text-whitet ">Branding Pioneers</span>
                     </div>
 
                     <!-- Contact Info -->
@@ -3101,6 +3101,79 @@
             });
         });
     </script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Accordion Menu
+        const accordionButtons = document.querySelectorAll('.mobile-accordion-button');
+
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle content
+                content.classList.toggle('hidden');
+
+                // Toggle icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('bi-dash');
+                    icon.classList.add('bi-plus');
+                } else {
+                    icon.classList.remove('bi-plus');
+                    icon.classList.add('bi-dash');
+                }
+            });
+        });
+
+        // Fix for desktop menu visibility on large screens
+        const desktopMenu = document.querySelector('nav .hidden.lg\\:!flex');
+
+        function adjustMenuVisibility() {
+            if (window.innerWidth >= 1024 && desktopMenu) {
+                desktopMenu.style.display = 'flex';
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', adjustMenuVisibility);
+        window.addEventListener('resize', adjustMenuVisibility);
+
+        // Mega Menu Animation
+        const megaMenus = document.querySelectorAll('.mega-menu');
+        megaMenus.forEach(menu => {
+            const parentItem = menu.closest('.has-mega-menu');
+
+            // Add a slight delay on mouseout to make the menu feel more responsive
+            let timeout;
+
+            parentItem.addEventListener('mouseenter', () => {
+                clearTimeout(timeout);
+                menu.style.display = 'block';
+                setTimeout(() => {
+                    menu.style.opacity = '1';
+                    menu.style.transform = 'translateY(0)';
+                }, 50);
+            });
+
+            parentItem.addEventListener('mouseleave', () => {
+                timeout = setTimeout(() => {
+                    menu.style.opacity = '0';
+                    menu.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        menu.style.display = 'none';
+                    }, 300);
+                }, 100);
+            });
+        });
+    </script>
+
 
 </body>
 
