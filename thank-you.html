@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .blob {
             position: absolute;
             border-radius: 50%;
@@ -21,57 +22,75 @@
             opacity: 0.2;
             animation: float 8s infinite;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
-        
+
         .check-animation {
             animation: checkmark 0.8s ease-out;
         }
-        
+
         @keyframes checkmark {
-            0% { transform: scale(0); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
+
 <body class="bg-gray-50 min-h-screen relative overflow-hidden">
     <!-- Background blobs for visual interest -->
     <div class="blob bg-teal-400 w-64 h-64 top-0 left-0"></div>
     <div class="blob bg-teal-300 w-48 h-48 bottom-0 right-0"></div>
-    
+
     <!-- Main Container -->
     <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
         <div class="w-full max-w-md space-y-8 text-center">
             <!-- Success Icon -->
             <div class="flex justify-center">
                 <div class="check-animation rounded-full bg-teal-100 p-6">
-                    <svg class="h-16 w-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-16 w-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
             </div>
-            
+
             <!-- Thank You Message -->
             <div>
                 <h1 class="gradient-text text-4xl sm:text-5xl font-bold tracking-tight">Thank You!</h1>
                 <p class="mt-4 text-lg text-gray-600">Your submission has been received successfully.</p>
                 <p class="mt-2 text-sm text-gray-500">We appreciate your time and will get back to you shortly.</p>
             </div>
-            
+
             <!-- Action Buttons -->
             <div class="mt-8 space-y-4">
-                <a href="/" class="inline-flex w-full items-center justify-center rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                <a href="/"
+                    class="inline-flex w-full items-center justify-center rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-150 ease-in-out">
                     Return to Homepage
                 </a>
                 <!-- <a href="#" class="inline-flex w-full items-center justify-center rounded-md border border-teal-300 bg-white px-6 py-3 text-base font-medium text-teal-700 hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-150 ease-in-out">
                     View Your Dashboard
                 </a> -->
             </div>
-            
+
             <!-- Additional Information -->
             <!-- <div class="mt-12 border-t border-gray-200 pt-8">
                 <div class="space-y-4">
@@ -93,7 +112,7 @@
                     </div>
                 </div>
             </div> -->
-            
+
             <!-- Footer -->
             <!-- <div class="mt-12 text-center">
                 <p class="text-sm text-gray-500">Need immediate assistance?</p>
@@ -101,12 +120,15 @@
             </div> -->
         </div>
     </div>
-    
+
     <!-- Wave decoration at bottom -->
     <div class="absolute bottom-0 left-0 right-0">
         <svg class="w-full h-20 fill-teal-100" viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,64 L48,74.7 C96,85,192,107,288,106.7 C384,107,480,85,576,69.3 C672,53,768,43,864,42.7 C960,43,1056,53,1152,58.7 C1248,64,1344,64,1392,64 L1440,64 L1440,120 L1392,120 C1344,120,1248,120,1152,120 C1056,120,960,120,864,120 C768,120,672,120,576,120 C480,120,384,120,288,120 C192,120,96,120,48,120 L0,120 Z"></path>
+            <path
+                d="M0,64 L48,74.7 C96,85,192,107,288,106.7 C384,107,480,85,576,69.3 C672,53,768,43,864,42.7 C960,43,1056,53,1152,58.7 C1248,64,1344,64,1392,64 L1440,64 L1440,120 L1392,120 C1344,120,1248,120,1152,120 C1056,120,960,120,864,120 C768,120,672,120,576,120 C480,120,384,120,288,120 C192,120,96,120,48,120 L0,120 Z">
+            </path>
         </svg>
     </div>
 </body>
+
 </html>
