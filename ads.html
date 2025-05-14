@@ -1487,6 +1487,24 @@
                 z-index: 0;
             }
         </style>
+<!-- testimonial section  -->
+        <style>
+      /* Grid pattern background */
+      .bg-grid-pattern {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+
+      #modal-video-container {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
     </section>
 
     <!-- Case studies -->
@@ -1743,112 +1761,224 @@
     <!-- FAQ ENDS -->
 
     <!-- Testimonials Section -->
-    <div class="max-w-7xl mx-auto px-4 py-16">
+    <div
+      class="px-4 pb-16 pt-10 bg-gradient-to-br from-gray-900 via-teal-800 to-gray-800"
+    >
+      <div class="max-w-7xl mx-auto container">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What Our Clients Say
-            </h2>
-            <div class="w-20 h-1 bg-teal-600 mx-auto mb-4"></div>
-            <p class="text-gray-600">
-                Hear success stories directly from our clients who have transformed their businesses with our solutions.
-            </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-10 h-10 text-teal-300 mx-auto mb-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            What Our Clients Say
+          </h2>
+          <div class="w-24 h-1 bg-teal-500 mx-auto mb-6 rounded-full"></div>
+          <p class="text-teal-100">
+            Hear success stories directly from our clients who have transformed
+            their businesses with our solutions.
+          </p>
         </div>
 
         <!-- Video Slider -->
         <div class="swiper video-testimonials">
-            <div class="swiper-wrapper pb-12">
-                <!-- Video 1 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="dQw4w9WgXcQ"
-                                style="background-image: url('https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Sarah Johnson</h3>
-                            <p class="text-gray-600 text-sm">CEO, TechStart Solutions</p>
-                        </div>
-                    </div>
+          <div class="swiper-wrapper pb-12">
+            <!-- Video 1 -->
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video-9/16 rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="hWUE9aeCPYw"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/hWUE9aeCPYw/maxresdefault.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
                 </div>
-
-                <!-- Video 2 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    IK
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Dr Inderjeet Kundu</h3>
+                    <p class="text-teal-200 text-sm">
+                      Founder, Pratham Diagnostic
+                    </p>
+                  </div>
                 </div>
-
-                <!-- Video 3 -->
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="W-rHIsDFrzQ"
-                                style="background-image: url('https://i.ytimg.com/vi/W-rHIsDFrzQ/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Emma Davis</h3>
-                            <p class="text-gray-600 text-sm">Marketing Director, InnovateCo</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide px-4">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <div class="aspect-video">
-                            <lite-youtube videoid="M7lc1UVf-VE"
-                                style="background-image: url('https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg');"></lite-youtube>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="font-semibold text-gray-900">Michael Chen</h3>
-                            <p class="text-gray-600 text-sm">Founder, Digital Dynamics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more slides as needed -->
+              </div>
             </div>
 
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- Video 2 -->
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video-9/16 rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="uHyPESqFZek"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/uHyPESqFZek/maxresdefault.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    MR
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Mr. Raghavendra</h3>
+                    <p class="text-teal-200 text-sm">Founder, Rad Foods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- Video 3 -->
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="oMbBr5pQVYQ"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/oMbBr5pQVYQ/maxresdefault.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    AS
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Dr. Amit Saho</h3>
+                    <p class="text-teal-200 text-sm">
+                      Director, Santa Vita Hospital in Ranchi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="ofAKnRI53N0"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/ofAKnRI53N0/maxresdefault.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    MA
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Mr. Amit</h3>
+                    <p class="text-teal-200 text-sm">
+                      Marketing Head, Allora Dental in Banglore
+                      <!-- Marketing Head of Allora Dental in Banglore -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="emP1_u-X13k"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/emP1_u-X13k/0.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    MN
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Mr. Nitant</h3>
+                    <p class="text-teal-200 text-sm">Gynecologist, Aligarh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide px-4">
+              <div
+                class="bg-gray-900 rounded-2xl shadow-xl p-6 border border-teal-700 hover:border-teal-500 transition-all duration-300"
+              >
+                <div class="aspect-video rounded-xl overflow-hidden">
+                  <lite-youtube
+                    videoid="Pa3M6bvTclE"
+                    style="
+                      background-image: url('https://img.youtube.com/vi/Pa3M6bvTclE/0.jpg');
+                    "
+                    class="rounded-xl"
+                  ></lite-youtube>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div
+                    class="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-3 text-teal-300 font-bold text-lg"
+                  >
+                    SM
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">
+                      Mrs. Sangeeta Maheswari
+                    </h3>
+                    <p class="text-teal-200 text-sm">
+                      <!-- Founder, Digital Dynamics -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more slides as needed -->
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next text-teal-300"></div>
+          <div class="swiper-button-prev text-teal-300"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
     </div>
 
     <!-- CTA -->
@@ -2267,117 +2397,182 @@
         });
     </script>
 
-    <script>
-        // First, define the Lite YouTube Embed component
-        class LiteYTEmbed extends HTMLElement {
-            constructor() {
-                super();
-                this.isIframeLoaded = false;
-            }
-
-            connectedCallback() {
-                this.videoId = this.getAttribute('videoid');
-
-                this.addEventListener('click', () => {
-                    if (!this.isIframeLoaded) {
-                        // Stop autoplay when video is clicked
-                        if (window.swiper) {
-                            window.swiper.autoplay.stop();
-                            // Disable autoplay completely
-                            window.swiper.params.autoplay.enabled = false;
-                        }
-
-                        const iframe = document.createElement('iframe');
-                        iframe.width = '100%';
-                        iframe.height = '100%';
-                        iframe.title = 'YouTube video player';
-                        iframe.frameBorder = '0';
-                        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                        iframe.allowFullscreen = true;
-                        iframe.src = `https://www.youtube-nocookie.com/embed/${this.videoId}?autoplay=1&enablejsapi=1`;
-
-                        // Remove background image and play button
-                        this.style.backgroundImage = '';
-                        const playBtn = this.querySelector('.lty-playbtn');
-                        if (playBtn) {
-                            playBtn.remove();
-                        }
-
-                        this.appendChild(iframe);
-                        this.isIframeLoaded = true;
-
-                        // Listen for video end
-                        iframe.addEventListener('load', () => {
-                            iframe.contentWindow.postMessage(JSON.stringify({
-                                event: 'listening',
-                                id: this.videoId
-                            }), '*');
-                        });
-                    }
-                });
-
-                // Set preview image
-                const playBtn = document.createElement('button');
-                playBtn.className = 'lty-playbtn';
-                this.appendChild(playBtn);
-            }
+   <script>
+      // First, define the Lite YouTube Embed component
+      class LiteYTEmbed extends HTMLElement {
+        constructor() {
+          super();
+          this.isIframeLoaded = false;
         }
-        customElements.define('lite-youtube', LiteYTEmbed);
 
-        // Add message listener for video events
-        window.addEventListener('message', (e) => {
-            try {
-                const data = JSON.parse(e.data);
-                if (data.event === 'onStateChange' && data.info === 0) { // Video ended
-                    if (window.swiper) {
-                        // Re-enable and start autoplay when video ends
-                        window.swiper.params.autoplay.enabled = true;
-                        window.swiper.autoplay.start();
-                    }
-                }
-            } catch (err) {
-                // Handle parsing error
+        connectedCallback() {
+          this.videoId = this.getAttribute("videoid");
+
+          // Set preview image
+          const playBtn = document.createElement("button");
+          playBtn.className = "lty-playbtn";
+          this.appendChild(playBtn);
+
+          // Add click handler to the play button
+          playBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.handleVideoClick();
+          });
+
+          // Make entire element clickable
+          this.addEventListener("click", (e) => {
+            if (e.target !== playBtn) {
+              this.handleVideoClick();
             }
+          });
+        }
+
+        handleVideoClick() {
+          // Stop swiper autoplay when video is clicked
+          if (window.swiper) {
+            window.swiper.autoplay.stop();
+            window.swiper.params.autoplay.enabled = false;
+          }
+
+          // Show video in modal instead of embedding directly
+          const videoId = this.getAttribute("videoid");
+          showVideoInModal(videoId);
+        }
+      }
+      customElements.define("lite-youtube", LiteYTEmbed);
+
+      // Add message listener for video events
+      window.addEventListener("message", (e) => {
+        try {
+          const data = JSON.parse(e.data);
+          if (data.event === "onStateChange" && data.info === 0) {
+            // Video ended
+            if (window.swiper) {
+              // Re-enable and start autoplay when video ends
+              window.swiper.params.autoplay.enabled = true;
+              window.swiper.autoplay.start();
+            }
+          }
+        } catch (err) {
+          // Handle parsing error
+        }
+      });
+
+      // Initialize Swiper
+      window.swiper = new Swiper(".video-testimonials", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+
+      // Create modal element
+      const modal = document.createElement("div");
+      modal.id = "video-modal";
+      modal.className =
+        "fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 hidden";
+      modal.innerHTML = `
+        <div class="relative w-full max-w-4xl mx-4">
+            <button id="close-modal" class="absolute -top-12 right-0 text-white hover:text-teal-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="aspect-video w-full">
+                <div id="modal-video-container"></div>
+            </div>
+        </div>
+    `;
+      document.body.appendChild(modal);
+
+      // Close modal when clicking the close button
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", function () {
+          closeVideoModal();
         });
 
-        // Initialize Swiper
-        window.swiper = new Swiper('.video-testimonials', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                }
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            on: {
-                slideChange: function () {
-                    // Find any active videos and pause them when sliding
-                    const activeVideos = document.querySelectorAll('lite-youtube iframe');
-                    activeVideos.forEach(video => {
-                        const videoParent = video.closest('lite-youtube');
-                        if (videoParent && !videoParent.closest('.swiper-slide-active')) {
-                            video.src = video.src; // This effectively resets/stops the video
-                        }
-                    });
-                }
-            }
+      // Close modal when clicking outside the video
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeVideoModal();
+        }
+      });
+
+      function showVideoInModal(videoId) {
+        const container = document.getElementById("modal-video-container");
+
+        // Create YouTube iframe
+        container.innerHTML = `
+            <iframe width="100%" height="100%" 
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                class="rounded-lg">
+            </iframe>
+        `;
+
+        modal.classList.remove("hidden");
+
+        // Listen for video end in modal
+        const iframe = container.querySelector("iframe");
+        iframe.addEventListener("load", () => {
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: "listening",
+              id: videoId,
+            }),
+            "*"
+          );
         });
+      }
+
+      function closeVideoModal() {
+        modal.classList.add("hidden");
+        const container = document.getElementById("modal-video-container");
+        container.innerHTML = "";
+
+        // Restart swiper autoplay when modal closes
+        if (window.swiper) {
+          window.swiper.params.autoplay.enabled = true;
+          window.swiper.autoplay.start();
+        }
+      }
+
+      // Handle all video card clicks as fallback
+      document.querySelectorAll(".swiper-slide").forEach((slide) => {
+        slide.addEventListener("click", function (e) {
+          // Don't trigger if clicking on navigation or other elements
+          if (e.target.closest("a") || e.target.closest("button")) return;
+
+          const youtubeElement = slide.querySelector("lite-youtube");
+          if (youtubeElement) {
+            const videoId = youtubeElement.getAttribute("videoid");
+            showVideoInModal(videoId);
+          }
+        });
+      });
     </script>
 
     <script>
