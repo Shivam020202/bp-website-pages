@@ -1532,6 +1532,498 @@
       </style>
     </section>
 
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+      <!-- Header -->
+      <div class="mb-8  w-full text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-6 h-6 text-teal-600 mx-auto mb-6">
+              <path fill-rule="evenodd"
+                  d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                  clip-rule="evenodd"></path>
+          </svg>
+          <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">Case Studies</h2>
+          <p class="text-gray-600 mt-2">Transforming businesses through digital excellence</p>
+      </div>
+
+      <!-- Client Tabs -->
+      <div class="flex space-x-1 mb-8 overflow-x-auto hide-scrollbar">
+          <button onclick="switchClient(0)" class="client-tab active px-6 py-3 text-sm font-medium whitespace-nowrap">
+            Indira Gandhi Eye Hospital
+          </button>
+          <button onclick="switchClient(1)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+            Influenz
+          </button>
+          <button onclick="switchClient(2)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+              Apollo Indraprastha
+          </button>
+          <button onclick="switchClient(3)" class="client-tab px-6 py-3 text-sm font-medium whitespace-nowrap">
+              Aureus Medical College
+          </button>
+      </div>
+
+      <!-- Case Study Content -->
+      <div class="case-study-content active" data-client="0">
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- Overview Card -->
+          <div class="lg:col-span-2 bg-white rounded-xl border-2 border-gray-100 p-6">
+              <div class="flex items-center mb-6">
+                  <img loading="lazy" src="https://enquire.brandingpioneers.com/medanta-logo.png" alt="Indira Gandhi Eye Hospital Logo"
+                      class="w-12 h-12 rounded-lg">
+                  <div class="ml-4">
+                      <h3 class="font-semibold text-gray-900">Indira Gandhi Eye Hospital</h3>
+                      <p class="text-sm text-gray-500">Healthcare • Website Optimization • SEO • Social Media Marketing</p>
+                  </div>
+              </div>
+      
+              <div class="space-y-6">
+                  <div class="relative h-48">
+                      <!-- Slide Indicators -->
+                      <div class="flex items-center space-x-3 mb-6">
+                          <div class="slide-indicator active" data-slide="0"></div>
+                          <div class="slide-indicator" data-slide="1"></div>
+                          <div class="slide-indicator" data-slide="2"></div>
+                      </div>
+      
+                      <!-- Content Slides -->
+                      <div class="slides-container">
+                          <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                              data-slide="0">
+                              <h4 class="text-lg font-medium mb-2">The Challenge</h4>
+                              <p class="text-gray-600 leading-relaxed">
+                                  Indira Gandhi Eye Hospital aimed to improve its online visibility, enhance patient engagement, and
+                                  strengthen its local presence in the competitive eye care industry.
+                              </p>
+                          </div>
+      
+                          <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                              data-slide="1">
+                              <h4 class="text-lg font-medium mb-2">The Solution</h4>
+                              <p class="text-gray-600 leading-relaxed">
+                                  We optimized their website for better user experience and navigation. We also implemented targeted
+                                  SEO and local optimization strategies to improve their search rankings. Additionally, we created engaging
+                                  content and developed social media campaigns to connect with their audience effectively.
+                              </p>
+                          </div>
+      
+                          <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                              data-slide="2">
+                              <h4 class="text-lg font-medium mb-2">The Impact</h4>
+                              <p class="text-gray-600 leading-relaxed">
+                                  Our work led to a 250% increase in organic search traffic, a 180% rise in social media engagement, growth
+                                  in local patient inquiries, and top 5 SEO rankings for key eye care terms, boosting their visibility and
+                                  patient engagement.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <!-- Key Achievements -->
+                  <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                      <div>
+                          <p class="text-sm text-gray-500 mb-1">Organic Search Traffic</p>
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 80%"></div>
+                          </div>
+                          <p class="text-sm font-medium mt-1">250% Increase</p>
+                      </div>
+                      <div>
+                          <p class="text-sm text-gray-500 mb-1">Social Media Engagement</p>
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 60%"></div>
+                          </div>
+                          <p class="text-sm font-medium mt-1">180% Rise</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Metrics Cards -->
+          <div class="space-y-4">
+              <div class="metric-card p-6 rounded-xl shadow-sm">
+                  <div class="flex justify-between items-start">
+                      <div>
+                          <p class="text-sm text-gray-500">Organic Search Traffic</p>
+                          <h4 class="text-2xl font-bold mt-1">250% Increase</h4>
+                      </div>
+                      <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 23%</span>
+                  </div>
+                  <div class="mt-4">
+                      <div class="progress-bar">
+                          <div class="progress-value" style="width: 75%"></div>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="metric-card p-6 rounded-xl shadow-sm">
+                  <div class="flex justify-between items-start">
+                      <div>
+                          <p class="text-sm text-gray-500">Local Patient Inquiries</p>
+                          <h4 class="text-2xl font-bold mt-1">Growth</h4>
+                      </div>
+                      <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 18%</span>
+                  </div>
+                  <div class="mt-4">
+                      <div class="progress-bar">
+                          <div class="progress-value" style="width: 65%"></div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- CTA -->
+              <a href="#"
+                  class="block p-6 hover:bg-gradient-to-l transition-all duration-200 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+                  <h4 class="font-medium mb-1">View Full Case Study</h4>
+                  <p class="text-sm opacity-90">Explore our complete transformation story →</p>
+              </a>
+          </div>
+      </div>
+      
+      </div>
+
+      <!-- Additional client content sections (hidden by default) -->
+      <div class="case-study-content" data-client="1">
+          <!-- Similar structure for Tech Solutions Inc -->
+          <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Overview Card -->
+            <div class="lg:col-span-2 bg-white rounded-xl border-2 border-gray-100 p-6">
+                <div class="flex items-center mb-6">
+                    <img loading="lazy" src="https://enquire.brandingpioneers.com/medanta-logo.png" alt="Influenz Logo"
+                        class="w-12 h-12 rounded-lg">
+                    <div class="ml-4">
+                        <h3 class="font-semibold text-gray-900">Influenz</h3>
+                        <p class="text-sm text-gray-500">Aesthetics Clinic • Website Optimization • SEO</p>
+                    </div>
+                </div>
+        
+                <div class="space-y-6">
+                    <div class="relative h-48">
+                        <!-- Slide Indicators -->
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="slide-indicator active" data-slide="0"></div>
+                            <div class="slide-indicator" data-slide="1"></div>
+                            <div class="slide-indicator" data-slide="2"></div>
+                        </div>
+        
+                        <!-- Content Slides -->
+                        <div class="slides-container">
+                            <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                data-slide="0">
+                                <h4 class="text-lg font-medium mb-2">The Challenge</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Influenz wanted to enhance its online visibility, increase organic reach, and stand out in the
+                                    competitive aesthetics market.
+                                </p>
+                            </div>
+        
+                            <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                data-slide="1">
+                                <h4 class="text-lg font-medium mb-2">The Solution</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We revamped their website to ensure a more intuitive and engaging user experience. Additionally, we
+                                    implemented advanced SEO practices to improve their search engine rankings and visibility, helping them
+                                    attract a broader client base.
+                                </p>
+                            </div>
+        
+                            <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible"
+                                data-slide="2">
+                                <h4 class="text-lg font-medium mb-2">The Impact</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Our efforts led to a 300% increase in organic search traffic, a 250% rise in new client consultations
+                                    booked via the website, and top 5 SEO rankings for key aesthetic service terms. This significantly
+                                    boosted their online presence in local and regional markets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Key Achievements -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Organic Search Traffic</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 80%"></div>
+                            </div>
+                            <p class="text-sm font-medium mt-1">300% Increase</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">New Client Consultations</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 60%"></div>
+                            </div>
+                            <p class="text-sm font-medium mt-1">250% Rise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Metrics Cards -->
+            <div class="space-y-4">
+                <div class="metric-card p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-gray-500">Organic Search Traffic</p>
+                            <h4 class="text-2xl font-bold mt-1">300% Increase</h4>
+                        </div>
+                        <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 23%</span>
+                    </div>
+                    <div class="mt-4">
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="metric-card p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm text-gray-500">New Client Consultations</p>
+                            <h4 class="text-2xl font-bold mt-1">250% Rise</h4>
+                        </div>
+                        <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 18%</span>
+                    </div>
+                    <div class="mt-4">
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- CTA -->
+                <a href="#"
+                    class="block p-6 hover:bg-gradient-to-l transition-all duration-200 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+                    <h4 class="font-medium mb-1">View Full Case Study</h4>
+                    <p class="text-sm opacity-90">Explore our complete transformation story →</p>
+                </a>
+            </div>
+        </div>
+        
+      </div>
+      <div class="case-study-content" data-client="2">
+          <!-- Similar structure for Global Retail Corp -->
+          <div class="grid lg:grid-cols-3 gap-6">
+              <!-- Overview Card -->
+              <div class="lg:col-span-2 bg-white rounded-xl border-2 border-gray-100 p-6">
+                  <div class="flex items-center mb-6">
+                      <img loading="lazy" src="https://enquire.brandingpioneers.com/medanta-logo.png" alt="Medanta Logo" class="w-12 h-12 rounded-lg">
+                      <div class="ml-4">
+                          <h3 class="font-semibold text-gray-900">Apollo Indraprastha</h3>
+                          <p class="text-sm text-gray-500">Healthcare • SEO • Social Media Marketing • Videography</p>
+                      </div>
+                  </div>
+          
+                  <div class="space-y-6">
+                      <div class="relative h-48">
+                          <!-- Slide Indicators -->
+                          <div class="flex items-center space-x-3 mb-6">
+                              <div class="slide-indicator active" data-slide="0"></div>
+                              <div class="slide-indicator" data-slide="1"></div>
+                              <div class="slide-indicator" data-slide="2"></div>
+                          </div>
+          
+                          <!-- Content Slides -->
+                          <div class="slides-container">
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="0">
+                                  <h4 class="text-lg font-medium mb-2">The Challenge</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      Apollo Indraprastha wanted to expand its global reach, improve patient engagement, and stand out in a competitive healthcare market. They needed to strengthen their online presence to attract both local and international patients.
+                                  </p>
+                              </div>
+          
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="1">
+                                  <h4 class="text-lg font-medium mb-2">The Solution</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      We worked on a complete digital marketing strategy, including SEO, creative social media campaigns, and engaging video content. This helped Apollo Indraprastha connect better with patients and increase its visibility in the global healthcare market.
+                                  </p>
+                              </div>
+          
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="2">
+                                  <h4 class="text-lg font-medium mb-2">The Impact</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      Our efforts led to a 300% increase in international patient traffic and a 250% growth in social media following, which helped Apollo Indraprastha grow its digital footprint and patient base.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <!-- Key Achievements -->
+                      <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                          <div>
+                              <p class="text-sm text-gray-500 mb-1">International Patient Traffic</p>
+                              <div class="progress-bar">
+                                  <div class="progress-value" style="width: 300%"></div>
+                              </div>
+                              <p class="text-sm font-medium mt-1">300% Increase</p>
+                          </div>
+                          <div>
+                              <p class="text-sm text-gray-500 mb-1">Social Media Following</p>
+                              <div class="progress-bar">
+                                  <div class="progress-value" style="width: 250%"></div>
+                              </div>
+                              <p class="text-sm font-medium mt-1">250% Growth</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Metrics Cards -->
+              <div class="space-y-4">
+                  <div class="metric-card p-6 rounded-xl shadow-sm">
+                      <div class="flex justify-between items-start">
+                          <div>
+                              <p class="text-sm text-gray-500">Monthly Views</p>
+                              <!-- <h4 class="text-2xl font-bold mt-1">150% Rise</h4> -->
+                          </div>
+                          <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 150%</span>
+                      </div>
+                      <div class="mt-4">
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 75%"></div>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <div class="metric-card p-6 rounded-xl shadow-sm">
+                      <div class="flex justify-between items-start">
+                          <div>
+                              <p class="text-sm text-gray-500">Watch Time</p>
+                              <!-- <h4 class="text-2xl font-bold mt-1">6.9K hrs</h4> -->
+                          </div>
+                          <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 90% </span>
+                      </div>
+                      <div class="mt-4">
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 65%"></div>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <!-- CTA -->
+                  <a href="#" class="block p-6 hover:bg-gradient-to-l transition-all duration-200 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+                      <h4 class="font-medium mb-1">View Full Case Study</h4>
+                      <p class="text-sm opacity-90">Explore our complete transformation story →</p>
+                  </a>
+              </div>
+          </div>
+          
+      </div>
+      <div class="case-study-content" data-client="3">
+          <!-- Similar structure for Education First -->
+          <div class="grid lg:grid-cols-3 gap-6">
+              <!-- Overview Card -->
+              <div class="lg:col-span-2 bg-white rounded-xl border-2 border-gray-100 p-6">
+                  <div class="flex items-center mb-6">
+                      <img loading="lazy" src="https://enquire.brandingpioneers.com/medanta-logo.png" alt="Medanta Logo" class="w-12 h-12 rounded-lg">
+                      <div class="ml-4">
+                          <h3 class="font-semibold text-gray-900">Aureus Medical College</h3>
+                          <p class="text-sm text-gray-500">Education • Website Design • SEO • Social Media Marketing</p>
+                      </div>
+                  </div>
+          
+                  <div class="space-y-6">
+                      <div class="relative h-48">
+                          <!-- Slide Indicators -->
+                          <div class="flex items-center space-x-3 mb-6">
+                              <div class="slide-indicator active" data-slide="0"></div>
+                              <div class="slide-indicator" data-slide="1"></div>
+                              <div class="slide-indicator" data-slide="2"></div>
+                          </div>
+          
+                          <!-- Content Slides -->
+                          <div class="slides-container">
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="0">
+                                  <h4 class="text-lg font-medium mb-2">The Challenge</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      Aureus Medical College needed to boost its digital presence, engage with prospective students, and increase enrollment through more effective online marketing strategies.
+                                  </p>
+                              </div>
+          
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="1">
+                                  <h4 class="text-lg font-medium mb-2">The Solution</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      We worked on redesigning their website to enhance user experience and navigation. Along with this, we optimized their SEO for key educational terms, created engaging content, and developed a social media strategy to connect with potential students and their communities.
+                                  </p>
+                              </div>
+          
+                              <div class="slide absolute w-full transition-opacity duration-300 opacity-0 invisible" data-slide="2">
+                                  <h4 class="text-lg font-medium mb-2">The Impact</h4>
+                                  <p class="text-gray-600 leading-relaxed">
+                                      Our efforts led to a 200% increase in website traffic, a 120% rise in social media engagement, and a 50% increase in inquiries from prospective students.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <!-- Key Achievements -->
+                      <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                          <div>
+                              <p class="text-sm text-gray-500 mb-1">Website Traffic</p>
+                              <div class="progress-bar">
+                                  <div class="progress-value" style="width: 200%"></div>
+                              </div>
+                              <p class="text-sm font-medium mt-1">200% Increase</p>
+                          </div>
+                          <div>
+                              <p class="text-sm text-gray-500 mb-1">Social Media Engagement</p>
+                              <div class="progress-bar">
+                                  <div class="progress-value" style="width: 120%"></div>
+                              </div>
+                              <p class="text-sm font-medium mt-1">120% Growth</p>
+                          </div>
+                          <div>
+                              <p class="text-sm text-gray-500 mb-1">Student Inquiries</p>
+                              <div class="progress-bar">
+                                  <div class="progress-value" style="width: 50%"></div>
+                              </div>
+                              <p class="text-sm font-medium mt-1">50% Increase</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Metrics Cards -->
+              <div class="space-y-4">
+                  <div class="metric-card p-6 rounded-xl shadow-sm">
+                      <div class="flex justify-between items-start">
+                          <div>
+                              <p class="text-sm text-gray-500">Monthly Views</p>
+                              <!-- <h4 class="text-2xl font-bold mt-1">150% Rise</h4> -->
+                          </div>
+                          <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 150%</span>
+                      </div>
+                      <div class="mt-4">
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 75%"></div>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <div class="metric-card p-6 rounded-xl shadow-sm">
+                      <div class="flex justify-between items-start">
+                          <div>
+                              <p class="text-sm text-gray-500">Watch Time</p>
+                              <!-- <h4 class="text-2xl font-bold mt-1">6.9K hrs</h4> -->
+                          </div>
+                          <span class="text-green-500 text-sm font-medium px-2 py-1 bg-green-50 rounded">↑ 90% </span>
+                      </div>
+                      <div class="mt-4">
+                          <div class="progress-bar">
+                              <div class="progress-value" style="width: 65%"></div>
+                          </div>
+                      </div>
+                  </div>
+          
+                  <!-- CTA -->
+                  <a href="#" class="block p-6 hover:bg-gradient-to-l transition-all duration-200 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl text-white">
+                      <h4 class="font-medium mb-1">View Full Case Study</h4>
+                      <p class="text-sm opacity-90">Explore our complete transformation story →</p>
+                  </a>
+              </div>
+          </div>
+          
+      </div>
+  </section>
+
     <!-- FAQ STARTS -->
     <section>
       <div class="max-w-7xl mx-auto md:rounded-3xl gradient-bg py-8 mb-12">
